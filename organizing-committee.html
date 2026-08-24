@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizing Committee - Care Robot 2026</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.6; display: flex; min-height: 100vh; }
+        .sidebar { width: 260px; background-color: #1a1a1a; color: #ffffff; position: fixed; top: 0; left: 0; bottom: 0; padding: 35px 22px; overflow-y: auto; z-index: 100; }
+        .sidebar-brand { font-size: 1.45rem; font-weight: 700; color: #ffffff; text-decoration: none; display: block; margin-bottom: 28px; letter-spacing: -0.01em; }
+        .sidebar-menu { list-style: none; }
+        .sidebar-menu li { margin-bottom: 14px; }
+        .sidebar-menu a { color: #d1d5db; text-decoration: none; font-size: 1.02rem; display: block; font-weight: 400; transition: color 0.15s ease; }
+        .sidebar-menu a:hover, .sidebar-menu a.active { color: #93c5fd; font-weight: 600; }
+        .sidebar-menu .bold-item { font-weight: 700; }
+        .menu-dropdown { cursor: pointer; }
+        .menu-dropdown-title { display: flex; align-items: center; gap: 8px; font-size: 1.02rem; color: #ffffff; user-select: none; }
+        .menu-dropdown-title .arrow { font-size: 0.75rem; transition: transform 0.2s; }
+        .submenu { display: none; list-style: none; padding-left: 18px; margin-top: 8px; }
+        .menu-dropdown.open .submenu { display: block; }
+        .submenu li { margin-bottom: 8px; }
+        .submenu a { font-size: 0.92rem; color: #9ca3af; }
+        .submenu a:hover, .submenu a.active { color: #ffffff; }
+        
+        .main-wrapper { margin-left: 260px; flex: 1; display: flex; flex-direction: column; min-width: 0; }
+        
+        /* Language Toggle Bar */
+        .top-lang-bar { display: flex; justify-content: flex-end; align-items: center; padding: 12px 30px; background-color: #0f172a; border-bottom: 1px solid #1e293b; }
+        .lang-switch { display: inline-flex; align-items: center; gap: 12px; font-size: 1.05rem; font-weight: 700; }
+        .lang-switch .globe-icon { font-size: 1.25rem; margin-right: 2px; }
+        .lang-switch a { text-decoration: none; color: #94a3b8; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 6px; transition: all 0.2s ease; }
+        .lang-switch a:hover { color: #ffffff; background: rgba(255, 255, 255, 0.08); }
+        .lang-switch a.active { color: #0d9488; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+        .lang-switch .divider { color: #475569; font-weight: 300; }
+
+        header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: white; padding: 50px 25px 40px; text-align: center; border-bottom: 4px solid #0d9488; }
+        .header-container { max-width: 900px; margin: 0 auto; }
+        .badge { display: inline-block; background-color: rgba(13, 148, 136, 0.3); border: 1px solid #0d9488; color: #5eead4; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; }
+        h1.conf-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; color: #ffffff; }
+        .conf-subtitle { font-size: 1.2rem; color: #93c5fd; margin-bottom: 18px; }
+        .conf-meta { display: inline-flex; gap: 20px; flex-wrap: wrap; font-size: 1.02rem; color: #e2e8f0; background: rgba(255, 255, 255, 0.08); padding: 10px 22px; border-radius: 8px; }
+        
+        main { max-width: 960px; margin: 35px auto; padding: 0 25px; width: 100%; }
+        .card { background: white; border-radius: 10px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
+        .card h2 { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 15px; border-left: 4px solid #0d9488; padding-left: 10px; }
+        
+        .committee-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .committee-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 22px; }
+        .committee-box h3 { font-size: 1.15rem; color: #1e3a8a; border-bottom: 2px solid #0d9488; padding-bottom: 8px; margin-bottom: 14px; }
+        .committee-box ul { list-style: none; }
+        .committee-box li { padding: 6px 0; border-bottom: 1px dashed #e2e8f0; font-size: 0.95rem; color: #334155; }
+        .committee-box li:last-child { border-bottom: none; }
+        .committee-box li strong { color: #0f172a; }
+        
+        footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94a3b8; font-size: 0.88rem; margin-top: auto; }
+        @media (max-width: 768px) { .sidebar { position: relative; width: 100%; height: auto; } .main-wrapper { margin-left: 0; } body { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+<div id="sidebar-container"></div>
+
+<div class="main-wrapper">
+    <div class="top-lang-bar">
+        <div class="lang-switch">
+            <span class="globe-icon">🌐</span>
+            <a href="organizing-committee_kr.html"><span style="font-size:1.15rem;">🇰🇷</span> KOR</a>
+            <span class="divider">|</span>
+            <a href="organizing-committee.html" class="active"><span style="font-size:1.15rem;">🇺🇸</span> ENG</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div class="badge">Committee</div>
+            <h1 class="conf-title">Care Robot 2026</h1>
+            <div class="conf-subtitle">Organizing & Industry Committee</div>
+            <div class="conf-meta">
+                <span>📅 November 25–27, 2026</span>
+                <span>📍 Yonsei Severance Building, Seoul, Korea</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Organizing Committee</h2>
+            <div class="committee-grid">
+                <!-- Leadership -->
+                <div class="committee-box">
+                    <h3>Leadership</h3>
+                    <ul>
+                        <li><strong>Organizing Chair:</strong> Kyunghwan Kim (Chairman, KCCR)</li>
+                        <li><strong>Honorary Advisor:</strong> Seungho Kim (Advisor, KCCR)</li>
+                    </ul>
+                </div>
+
+                <!-- Organizing Committee -->
+                <div class="committee-box">
+                    <h3>Organizing Committee</h3>
+                    <ul>
+                        <li><strong>Yeonggeol Bae</strong> (AbleAI)</li>
+                        <li><strong>You Me Han</strong> (Hoseo University)</li>
+                        <li><strong>Minsu Jang</strong> (ETRI)</li>
+                        <li><strong>Duk-Young Jung</strong> (Kyung Hee University)</li>
+                        <li><strong>Jongbae Kim</strong> (Yonsei University)</li>
+                        <li><strong>Seung-Jong Kim</strong> (Korea University)</li>
+                        <li><strong>Seung-Won Kim</strong> (SeoulTech)</li>
+                        <li><strong>Sung-Soo Kim</strong> (Chungnam National University)</li>
+                        <li><strong>Jeong-Whan Lee</strong> (Konkuk University)</li>
+                        <li><strong>Youngran Lee</strong> (Korean Nurses Association)</li>
+                        <li><strong>Yong Soon Shin</strong> (Hanyang University)</li>
+                        <li><strong>Wookho Son</strong> (ETRI)</li>
+                    </ul>
+                </div>
+
+                <!-- Industry Committee -->
+                <div class="committee-box">
+                    <h3>Industry Committee</h3>
+                    <ul>
+                        <li><strong>Seongmin Bak</strong> (WHA A.I.)</li>
+                        <li><strong>Inock Lee</strong> (Ninety System)</li>
+                        <li><strong>Junyoung Lee</strong> (NOVITEC)</li>
+                        <li><strong>Hoonsang Lee</strong> (CURACO)</li>
+                        <li><strong>Free Bionics</strong>, Taiwan</li>
+                        <li><strong>Wacoh Tech</strong>, Japan</li>
+                        <li><strong>Woodway Inc.</strong>, USA</li>
+                        <li style="color: #64748b; font-style: italic;">To be updated</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Korea Cooperative of Care Robots (KCCR). All rights reserved.</p>
+    </footer>
+</div>
+
+<script src="menu.js"></script>
+</body>
+</html>

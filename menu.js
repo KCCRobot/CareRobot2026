@@ -15,17 +15,17 @@
                 </ul>
             </li>
             <li class="menu-dropdown">
-                <div class="menu-dropdown-title"><span class="arrow">∨</span> Call for Contributions</div>
+                <div class="menu-dropdown-title"><span class="arrow">∨</span> Call for Papers</div>
                 <ul class="submenu">
                     <li><a href="call-for-papers.html">Call for Papers</a></li>
                     <li><a href="submission-guidelines.html">Submission Guidelines</a></li>
                 </ul>
             </li>
-            <li><a href="registration.html">Registration</a></li>
-            <li><a href="organizing-committee.html">Organizing Committee</a></li>
+            <li><a href="registration.html">Pre-Registration</a></li>
+            <li><a href="organizing-committee.html">Committees</a></li>
             <li><a href="sponsorship.html">Sponsorship & Exhibition</a></li>
             <li><a href="about.html">About KCCR</a></li>
-            <li><a href="care-robot-2025.html">Care Robot Archive</a></li>
+            <li><a href="archive.html">Past Events</a></li>
         </ul>
     </nav>`;
 

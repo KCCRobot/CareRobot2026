@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>초청 강연 - Care Robot 2026</title>
+    <title>초청강연 - Care Robot 2026</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.6; display: flex; min-height: 100vh; }
@@ -42,9 +42,14 @@
         
         /* Speaker Card Styling */
         .speaker-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 26px; margin-bottom: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        .speaker-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid #f1f5f9; padding-bottom: 14px; margin-bottom: 16px; }
+        .speaker-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid #f1f5f9; padding-bottom: 16px; margin-bottom: 16px; }
+        .speaker-photo { width: 120px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid #e2e8f0; flex-shrink: 0; }
+        .speaker-info { flex: 1; min-width: 200px; }
         .speaker-name { font-size: 1.35rem; font-weight: 700; color: #0f172a; }
-        .speaker-org { font-size: 0.95rem; color: #0d9488; font-weight: 600; }
+        .speaker-org { font-size: 0.95rem; color: #0d9488; font-weight: 600; margin-top: 4px; }
+        .speaker-title-box { background: #f8fafc; border-left: 3px solid #0d9488; padding: 10px 14px; margin-top: 10px; border-radius: 0 6px 6px 0; }
+        .speaker-title-label { font-size: 0.78rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+        .speaker-talk-title { font-size: 1.05rem; font-weight: 700; color: #1e3a8a; margin-top: 2px; }
         .speaker-tag { background: #e0f2fe; color: #0369a1; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; border: 1px solid #bae6fd; }
         .speaker-bio { font-size: 0.98rem; line-height: 1.75; color: #475569; margin-bottom: 12px; }
 
@@ -68,41 +73,46 @@
     </div>
     <header>
         <div class="header-container">
-            <div class="badge">기조강연</div>
+            <div class="badge">초청강연</div>
             <h1 class="conf-title">Care Robot 2026</h1>
-            <div class="conf-subtitle">초청 연사 안내</div>
+            <div class="conf-subtitle">초청강연 연사</div>
             <div class="conf-meta">
                 <span>📅 2026년 11월 26일</span>
-                <span>📍 연세세브란스빌딩</span>
+                <span>📍 서울 연세재단 세브란스빌딩</span>
             </div>
         </div>
     </header>
     <main>
         <div class="card">
-            <h2>초청 강연 (Keynote Speakers)</h2>
+            <h2>초청강연 연사</h2>
             
             <!-- 연사 카드: 송원경 박사 -->
             <div class="speaker-card">
                 <div class="speaker-header">
-                    <div>
-                        <div class="speaker-name">송원경 박사 (Dr. Won-Kyung Song)</div>
-                        <div class="speaker-org">국립재활원 재활연구소 / 재활로봇중개연구사업단</div>
+                    <img src="photos/wonkyung song.png" alt="송원경 박사" class="speaker-photo">
+                    <div class="speaker-info">
+                        <div class="speaker-name">송원경 박사</div>
+                        <div class="speaker-org">국립재활원 (NRC)</div>
+                        <div class="speaker-title-box">
+                            <div class="speaker-title-label">강연 제목</div>
+                            <div class="speaker-talk-title">한국 돌봄로봇의 최신 동향과 미래 발전 방향 (Recent Trends and Future Directions of Care Robots in Korea)</div>
+                        </div>
                     </div>
-                    <span class="speaker-tag">초청 연사 (Keynote Speaker)</span>
+                    <span class="speaker-tag">초청강연 1</span>
                 </div>
                 <div class="speaker-bio">
-                    <p>송원경 박사는 국립재활원 재활연구소의 재활보조기술연구과장이자 재활로봇중개연구사업단장으로서 재활로봇 및 돌봄로봇 분야의 연구개발과 실증을 이끌고 있다. 또한 수요자중심 돌봄로봇 및 서비스 실증연구개발사업을 담당하며 돌봄로봇의 현장 적용과 산업화를 위한 연구를 수행하고 있다.</p>
+                    <p>송원경 박사는 국립재활원(NRC)의 재활 및 돌봄로봇 분야를 이끄는 대표적인 연구자입니다. 현재 국립재활원에서 재활보조기술연구과장, 재활로봇중개연구사업단장, 그리고 수요자 중심 돌봄로봇 및 서비스 실증 R&D 사업단장을 맡고 있습니다.</p>
                 </div>
                 <div class="speaker-bio">
-                    <p>2001년 KAIST 전기및전자공학과에서 공학박사 학위를 취득했으며, 삼성SDI에서 신공정개발 책임연구원으로 근무한 후 2008년 국립재활원에 합류했다. 이후 재활보조로봇 개발을 비롯하여 재활로봇과 돌봄로봇의 중개연구 및 실용화를 지속적으로 추진해 오고 있다.</p>
+                    <p>2001년 KAIST에서 전기및전자공학 박사 학위를 취득하였으며, 국립재활원에 합류하기 전 삼성SDI(2001~2008년)에서 수석연구원으로 신공정 개발 연구를 수행했습니다. 2008년 국립재활원 입사 이후 재활 보조 로봇 및 돌봄로봇의 연구와 중개 개발을 주도하며 장애인과 고령자를 위한 로봇 기술의 발전과 실용화에 기여해 오고 있습니다.</p>
                 </div>
             </div>
 
-            <!-- 추가 연사 업데이트 공지 안내 박스 -->
+            <!-- 추가 연사 안내 -->
             <div class="more-speakers-notice">
                 <div style="font-size: 1.4rem; margin-bottom: 6px;">📢</div>
-                <strong>추가 초청 연사 안내 예정 (More Speakers Coming Soon)</strong>
-                <p style="margin-top: 6px; font-size: 0.95rem;">다른 초청 강연자 분들은 확정되는 대로 순차적으로 추가 공지될 예정입니다.</p>
+                <strong>추가 초청 연사 발표 예정</strong>
+                <p style="margin-top: 6px; font-size: 0.95rem;">추가 초청강연 연사는 확정되는 대로 순차적으로 안내해 드릴 예정입니다.</p>
             </div>
         </div>
     </main>

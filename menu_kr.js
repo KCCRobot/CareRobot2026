@@ -7,24 +7,24 @@
             <li class="menu-dropdown">
                 <div class="menu-dropdown-title"><span class="arrow">∨</span> 프로그램</div>
                 <ul class="submenu">
-                    <li><a href="schedule_kr.html">일정표</a></li>
+                    <li><a href="schedule_kr.html">전체 일정표</a></li>
                     <li><a href="presentations_kr.html">발표 세션</a></li>
                     <li><a href="keynotes_kr.html">초청 강연</a></li>
                     <li><a href="exhibition_kr.html">전시회</a></li>
                 </ul>
             </li>
             <li class="menu-dropdown">
-                <div class="menu-dropdown-title"><span class="arrow">∨</span> 논문 및 발표</div>
+                <div class="menu-dropdown-title"><span class="arrow">∨</span> 논문 제출</div>
                 <ul class="submenu">
-                    <li><a href="call-for-papers_kr.html">논문 모집</a></li>
-                    <li><a href="submission-guidelines_kr.html">발표 가이드라인</a></li>
+                    <li><a href="call-for-papers_kr.html">논문 모집 안내</a></li>
+                    <li><a href="submission-guidelines_kr.html">제출 지침</a></li>
                 </ul>
             </li>
-            <li><a href="registration_kr.html">참석 등록</a></li>
+            <li><a href="registration_kr.html">사전 등록</a></li>
             <li><a href="organizing-committee_kr.html">조직위원회</a></li>
-            <li><a href="sponsorship_kr.html">전시 후원</a></li>
+            <li><a href="sponsorship_kr.html">후원 전시</a></li>
             <li><a href="about_kr.html">협동조합 소개</a></li>
-            <li><a href="care-robot-2025_kr.html">이전 Care Robot</a></li>
+            <li><a href="archive_kr.html">이전 행사</a></li>
         </ul>
     </nav>`;
 

@@ -42,9 +42,14 @@
         
         /* Speaker Card Styling */
         .speaker-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 26px; margin-bottom: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        .speaker-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid #f1f5f9; padding-bottom: 14px; margin-bottom: 16px; }
+        .speaker-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid #f1f5f9; padding-bottom: 16px; margin-bottom: 16px; }
+        .speaker-photo { width: 120px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid #e2e8f0; flex-shrink: 0; }
+        .speaker-info { flex: 1; min-width: 200px; }
         .speaker-name { font-size: 1.35rem; font-weight: 700; color: #0f172a; }
-        .speaker-org { font-size: 0.95rem; color: #0d9488; font-weight: 600; }
+        .speaker-org { font-size: 0.95rem; color: #0d9488; font-weight: 600; margin-top: 4px; }
+        .speaker-title-box { background: #f8fafc; border-left: 3px solid #0d9488; padding: 10px 14px; margin-top: 10px; border-radius: 0 6px 6px 0; }
+        .speaker-title-label { font-size: 0.78rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+        .speaker-talk-title { font-size: 1.05rem; font-weight: 700; color: #1e3a8a; margin-top: 2px; }
         .speaker-tag { background: #e0f2fe; color: #0369a1; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; border: 1px solid #bae6fd; }
         .speaker-bio { font-size: 0.98rem; line-height: 1.75; color: #475569; margin-bottom: 12px; }
 
@@ -84,11 +89,16 @@
             <!-- Speaker Card: Dr. Won-Kyung Song -->
             <div class="speaker-card">
                 <div class="speaker-header">
-                    <div>
+                    <img src="photos/wonkyung song.png" alt="Dr. Won-Kyung Song" class="speaker-photo">
+                    <div class="speaker-info">
                         <div class="speaker-name">Dr. Won-Kyung Song</div>
                         <div class="speaker-org">National Rehabilitation Center (NRC), Korea</div>
+                        <div class="speaker-title-box">
+                            <div class="speaker-title-label">Keynote Speech Title</div>
+                            <div class="speaker-talk-title">Recent Trends and Future Directions of Care Robots in Korea</div>
+                        </div>
                     </div>
-                    <span class="speaker-tag">Keynote Speaker</span>
+                    <span class="speaker-tag">Keynote Speaker 1</span>
                 </div>
                 <div class="speaker-bio">
                     <p>Dr. Won-Kyung Song is a leading researcher in rehabilitation and care robotics at the National Rehabilitation Center (NRC), Korea. He currently serves as Director of the Department of Rehabilitation Assistive Technology Research, Head of the Rehabilitation Robot Translational Research Program, and Director in charge of the Consumer-Centered Care Robot and Service Demonstration R&D Program at the NRC.</p>

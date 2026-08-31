@@ -40,9 +40,9 @@ main { max-width: 960px; margin: 35px auto; padding: 0 25px; width: 100%; }
 .card h2 { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 15px; border-left: 4px solid #0d9488; padding-left: 10px; }
 .card p { font-size: 1.02rem; line-height: 1.75; margin-bottom: 14px; }
 .dates-table, .fee-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-.dates-table th, .dates-table td, .fee-table th, .fee-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+.dates-table th, .dates-table td, .fee-table th, .fee-table td { padding: 12px 14px; text-align: left; border: 1px solid #e2e8f0; }
 .dates-table th, .fee-table th { background-color: #f1f5f9; font-weight: 600; color: #0f172a; }
-.dates-table td:last-child, .fee-table td:last-child { font-weight: 600; color: #1e3a8a; }
+.fee-table td:last-child { font-weight: 600; color: #1e3a8a; }
 .prep-box { background: #fefce8; border: 1px solid #fef08a; border-radius: 8px; padding: 25px; text-align: center; color: #854d0e; font-size: 1.05rem; font-weight: 500; margin: 20px 0; }
 .contact-box { background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 8px; padding: 18px; text-align: center; margin-top: 20px; }
 .contact-box a { color: #1e3a8a; font-weight: bold; text-decoration: none; }
@@ -64,10 +64,72 @@ footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94
             <div class="badge">프로그램</div>
             <h1 class="conf-title">Care Robot 2026</h1>
             <div class="conf-subtitle">전체 일정표</div>
-            <div class="conf-meta"><span>📅 2026.11.25~27</span></div>
+            <div class="conf-meta"><span>📅 2026.11.26</span></div>
         </div>
     </header>
-    <main><div class="card"><h2>전체 일정표</h2><p>11월 26일 메인 컨퍼런스 및 25·27일 산업시찰이 진행됩니다.</p></div></main>
+    <main>
+        <div class="card">
+            <h2>전체 일정표</h2>
+            <table class="dates-table">
+                <thead>
+                    <tr>
+                        <th>시간</th>
+                        <th>프로그램</th>
+                        <th>장소 / 비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:30 ~ 10:00</td>
+                        <td>현장 등록 (사전 등록자 뱃지 및 논문집 수령)</td>
+                        <td>대회의실 라운지</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 ~ 11:00</td>
+                        <td>구두 발표 1</td>
+                        <td rowspan="2" style="vertical-align: middle;">대회의실</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 ~ 12:00</td>
+                        <td>초청강연 1</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 ~ 13:00</td>
+                        <td>점심식사</td>
+                        <td>식권으로 지하 식당가 이용</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 ~ 14:00</td>
+                        <td>구두 발표 2</td>
+                        <td rowspan="3" style="vertical-align: middle;">대회의실</td>
+                    </tr>
+                    <tr>
+                        <td>14:00 ~ 15:00</td>
+                        <td>초청강연 2</td>
+                    </tr>
+                    <tr>
+                        <td>15:00 ~ 16:00</td>
+                        <td>구두 발표 3</td>
+                    </tr>
+                    <tr>
+                        <td>16:00 ~ 17:00</td>
+                        <td>포스터 세션</td>
+                        <td>대회의실 라운지</td>
+                    </tr>
+                    <tr>
+                        <td>17:00 ~ 18:00</td>
+                        <td>구두 발표 4</td>
+                        <td rowspan="2" style="vertical-align: middle;">대회의실</td>
+                    </tr>
+                    <tr>
+                        <td>18:00</td>
+                        <td>시상식 및 행사 종료</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.9rem; color: #64748b; margin-top: 10px;">* 상기 일정은 최종 프로그램에서 변경될 수 있습니다.</p>
+        </div>
+    </main>
     <footer><p>&copy; 2026 한국돌봄로봇협동조합 (Korea Cooperative of Care Robots, KCCR). All rights reserved.</p></footer>
 </div>
 <script src="menu_kr.js"></script>

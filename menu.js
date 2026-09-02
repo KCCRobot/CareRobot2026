@@ -7,26 +7,33 @@
             <li class="menu-dropdown">
                 <div class="menu-dropdown-title"><span class="arrow">∨</span> Program</div>
                 <ul class="submenu">
-                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="schedule.html">Schedule at a Glance</a></li>
                     <li><a href="presentations.html">Presentations</a></li>
-                    <li><a href="keynotes.html">Keynote Speakers</a></li>
+                    <li><a href="keynotes.html">Keynote Talks</a></li>
                     <li><a href="exhibition.html">Exhibition</a></li>
-                    <li><a href="tours.html">Site Visit</a></li>
+                    <li><a href="tours.html">Industrial Tours & B2B</a></li>
                 </ul>
             </li>
             <li class="menu-dropdown">
-                <div class="menu-dropdown-title"><span class="arrow">∨</span> Call for Papers</div>
+                <div class="menu-dropdown-title"><span class="arrow">∨</span> Call for Contributions</div>
                 <ul class="submenu">
-                    <li><a href="call-for-papers.html">Call for Papers</a></li>
+                    <li><a href="call-for-papers.html">Call for Papers (CFP)</a></li>
+                    <li><a href="contest.html">Contests</a></li>
                     <li><a href="submission-guidelines.html">Submission Guidelines</a></li>
                 </ul>
             </li>
-            <li><a href="registration.html">Pre-Registration</a></li>
-            <li><a href="organizing-committee.html">Committees</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="organizing-committee.html">Organizing Committee</a></li>
             <li><a href="sponsorship.html">Sponsorship & Exhibition</a></li>
             <li><a href="about.html">About KCCR</a></li>
-            <li><a href="archive.html">Past Events</a></li>
+            <li><a href="archive.html">Workshop Archive</a></li>
         </ul>
+        <!-- 좌측 사이드바 하단 KCCR 로고 링크 -->
+        <div style="margin-top: 25px; padding-top: 18px; border-top: 1px solid #333; text-align: center;">
+            <a href="https://www.kccrobot.com/index_en.html" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 6px; border-radius: 8px; transition: opacity 0.2s;" title="Go to KCCR Home (ENG)">
+                <img src="photos/kccr_logo.png" alt="KCCR Logo" onerror="this.onerror=null; this.src='photos/kccr_logo.jpg';" style="max-width: 140px; height: auto; display: block; margin: 0 auto; filter: brightness(0.95);">
+            </a>
+        </div>
     </nav>`;
 
     document.addEventListener('DOMContentLoaded', () => {

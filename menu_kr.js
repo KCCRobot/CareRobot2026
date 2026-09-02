@@ -23,9 +23,16 @@
             <li><a href="registration_kr.html">사전 등록</a></li>
             <li><a href="organizing-committee_kr.html">조직위원회</a></li>
             <li><a href="sponsorship_kr.html">후원 전시</a></li>
+            <li><a href="contest_kr.html">공모전</a></li>
             <li><a href="about_kr.html">협동조합 소개</a></li>
             <li><a href="archive_kr.html">이전 행사</a></li>
         </ul>
+        <!-- 좌측 사이드바 하단 KCCR 로고 링크 -->
+        <div style="margin-top: 25px; padding-top: 18px; border-top: 1px solid #333; text-align: center;">
+            <a href="https://www.kccrobot.com/index.html" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 6px; border-radius: 8px; transition: opacity 0.2s;" title="조합 공식 홈페이지 바로가기 (국문)">
+                <img src="photos/kccr_logo.png" alt="한국돌봄로봇협동조합 로고" onerror="this.onerror=null; this.src='photos/kccr_logo.jpg';" style="max-width: 140px; height: auto; display: block; margin: 0 auto; filter: brightness(0.95);">
+            </a>
+        </div>
     </nav>`;
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -35,7 +42,8 @@
         const currentPath = window.location.pathname.split('/').pop() || 'index_kr.html';
         const links = container.querySelectorAll('.sidebar-menu a');
         links.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
+            const hrefPath = link.getAttribute('href').split('#')[0];
+            if (hrefPath === currentPath) {
                 link.classList.add('active');
                 const parentDropdown = link.closest('.menu-dropdown');
                 if (parentDropdown) {

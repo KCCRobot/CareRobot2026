@@ -38,7 +38,11 @@ h1.conf-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; color:
 main { max-width: 960px; margin: 35px auto; padding: 0 25px; width: 100%; }
 .card { background: white; border-radius: 10px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
 .card h2 { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 15px; border-left: 4px solid #0d9488; padding-left: 10px; }
+.card h3 { font-size: 1.22rem; color: #0f172a; margin: 20px 0 10px; }
 .card p { font-size: 1.02rem; line-height: 1.75; margin-bottom: 14px; }
+.contest-box { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+.contest-box ul { padding-left: 20px; margin-top: 8px; }
+.contest-box li { margin-bottom: 6px; font-size: 0.98rem; }
 footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94a3b8; font-size: 0.88rem; margin-top: auto; }
 @media (max-width: 768px) { .sidebar { position: relative; width: 100%; height: auto; } .main-wrapper { margin-left: 0; } body { flex-direction: column; } }</style>
 </head>
@@ -50,11 +54,56 @@ footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94
         <div class="header-container">
             <div class="badge">Announcements</div>
             <h1 class="conf-title">Care Robot 2026</h1>
-            <div class="conf-subtitle">Official Announcements</div>
-            <div class="conf-meta"><span>📅 November 25–27, 2026</span></div>
+            <div class="conf-subtitle">Official Announcements & Contest Notices</div>
+            <div class="conf-meta"><span>📅 November 26, 2026</span></div>
         </div>
     </header>
-    <main><div class="card"><h2>Announcements</h2><p>Pre-Registration opens Sep 1 – Sep 30, 2026. CFP deadline: Oct 12, 2026.</p></div></main>
+    <main>
+        <div class="card">
+            <h2>Announcements</h2>
+            <p>
+                Pre-registration (Sep 1 – Sep 30) and paper/poster submissions (deadline: Oct 12) are currently open.<br>
+                Please complete your pre-registration online first.
+            </p>
+        </div>
+
+        <div class="card" id="contest-info">
+            <h2>Care Robot 2026 Public Contests</h2>
+            <p>
+                To envision a harmonious future of caregiving and robotics technology, Care Robot 2026 is organizing a 
+                <strong>Drawing Contest</strong> and an <strong>Essay Contest</strong>. 
+                Winning entries will be <strong>exhibited and awarded during Care Robot 2026 on November 26</strong>.
+            </p>
+
+            <div class="contest-box" id="contest-art">
+                <h3>🎨 "The Robot of My Dreams" Drawing Contest</h3>
+                <ul>
+                    <li><strong>Eligibility:</strong> Preschoolers and elementary school students</li>
+                    <li><strong>Artwork Requirements:</strong> Must feature <strong>at least one human and one robot</strong></li>
+                    <li><strong>Media:</strong> No restrictions (crayons, watercolors, colored pencils, digital drawings, etc.)</li>
+                    <li><strong>Submission Deadline:</strong> <strong>Monday, October 12, 2026, 18:00 KST</strong></li>
+                    <li><strong>Submission Methods (Choose 1):</strong>
+                        <ul style="margin-top: 4px;">
+                            <li><strong>On-site:</strong> Draw and submit directly at the <a href="https://www.slw.kr/kor/main.do" target="_blank" style="color:#0d9488; font-weight:600;">Smart Life Week</a> booth (Oct 6–8, COEX)</li>
+                            <li><strong>Online:</strong> Take a clear photo of the completed artwork and send it to <a href="mailto:kccrobot@gmail.com">kccrobot@gmail.com</a></li>
+                        </ul>
+                    </li>
+                    <li><strong>Contact Person:</strong> Jihye Park (+82-10-4753-6580)</li>
+                </ul>
+            </div>
+
+            <div class="contest-box" id="contest-essay">
+                <h3>✍️ "My Caregiving Story" Essay Contest</h3>
+                <ul>
+                    <li><strong>Theme:</strong> Sincere essays reflecting personal experiences of giving or receiving care</li>
+                    <li><strong>Length:</strong> 3,000 to 5,000 characters (including spaces)</li>
+                    <li><strong>Submission Deadline:</strong> <strong>Monday, October 12, 2026, 18:00 KST</strong></li>
+                    <li><strong>Submission Method:</strong> Email submission (<a href="mailto:kccrobot@gmail.com">kccrobot@gmail.com</a>)</li>
+                    <li><strong>Contact Person:</strong> Heeok Yang (+82-10-8650-6994)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
     <footer><p>&copy; 2026 Korea Cooperative of Care Robots (KCCR). All rights reserved.</p></footer>
 </div>
 <script src="menu.js"></script>

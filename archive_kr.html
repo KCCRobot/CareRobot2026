@@ -24,7 +24,6 @@
         .submenu a { font-size: 0.92rem; color: #9ca3af; }
         .submenu a:hover, .submenu a.active { color: #ffffff; }
         .main-wrapper { margin-left: 260px; flex: 1; display: flex; flex-direction: column; min-width: 0; }
-        
         .top-lang-bar { display: flex; justify-content: flex-end; align-items: center; padding: 12px 30px; background-color: #0f172a; border-bottom: 1px solid #1e293b; }
         .lang-switch { display: inline-flex; align-items: center; gap: 12px; font-size: 1.05rem; font-weight: 700; }
         .lang-switch .globe-icon { font-size: 1.25rem; margin-right: 2px; }
@@ -32,46 +31,33 @@
         .lang-switch a:hover { color: #ffffff; background: rgba(255, 255, 255, 0.08); }
         .lang-switch a.active { color: #0d9488; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
         .lang-switch .divider { color: #475569; font-weight: 300; }
-
         header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: white; padding: 50px 25px 40px; text-align: center; border-bottom: 4px solid #0d9488; }
         .header-container { max-width: 900px; margin: 0 auto; }
         .badge { display: inline-block; background-color: rgba(13, 148, 136, 0.3); border: 1px solid #0d9488; color: #5eead4; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; }
         h1.conf-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; color: #ffffff; }
         .conf-subtitle { font-size: 1.2rem; color: #93c5fd; margin-bottom: 18px; }
         .conf-meta { display: inline-flex; gap: 20px; flex-wrap: wrap; font-size: 1.02rem; color: #e2e8f0; background: rgba(255, 255, 255, 0.08); padding: 10px 22px; border-radius: 8px; }
-        
         .archive-nav { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; }
         .archive-nav a { text-decoration: none; color: #1e3a8a; background-color: #ffffff; border: 2px solid #0d9488; padding: 10px 24px; border-radius: 30px; font-weight: 700; font-size: 1.05rem; transition: all 0.2s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .archive-nav a:hover { background-color: #0d9488; color: #ffffff; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(13, 148, 136, 0.2); }
-
         main { max-width: 960px; margin: 35px auto; padding: 0 25px; width: 100%; }
         .card { background: white; border-radius: 10px; padding: 30px; margin-bottom: 35px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; scroll-margin-top: 20px; }
         .card h2 { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 15px; border-left: 4px solid #0d9488; padding-left: 10px; }
         .card p { font-size: 1.02rem; line-height: 1.75; margin-bottom: 14px; }
-        
         .dates-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
         .dates-table th, .dates-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; }
         .dates-table th { background-color: #f1f5f9; font-weight: 600; color: #0f172a; }
         .dates-table td:last-child { font-weight: 600; color: #1e3a8a; }
-        
         .gallery-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 15px; }
         .gallery-item { flex: 1; min-width: 270px; max-width: 48%; background: #f8fafc; border: 1px solid #e2e8f0; padding: 14px; border-radius: 8px; text-align: center; }
         .gallery-item img { width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: block; }
         .gallery-caption { margin-top: 10px; font-size: 0.92rem; color: #475569; font-weight: 600; }
-        
         footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94a3b8; font-size: 0.88rem; margin-top: auto; }
-        @media (max-width: 768px) { 
-            .sidebar { position: relative; width: 100%; height: auto; } 
-            .main-wrapper { margin-left: 0; } 
-            body { flex-direction: column; } 
-            .gallery-item { max-width: 100%; }
-        }
+        @media (max-width: 768px) { .sidebar { position: relative; width: 100%; height: auto; } .main-wrapper { margin-left: 0; } body { flex-direction: column; } .gallery-item { max-width: 100%; } }
     </style>
 </head>
 <body>
-
 <div id="sidebar-container"></div>
-
 <div class="main-wrapper">
     <div class="top-lang-bar">
         <div class="lang-switch">
@@ -81,7 +67,6 @@
             <a href="archive.html"><span style="font-size:1.15rem;">🇺🇸</span> ENG</a>
         </div>
     </div>
-
     <header>
         <div class="header-container">
             <div class="badge">워크샵 아카이브</div>
@@ -92,20 +77,17 @@
             </div>
         </div>
     </header>
-
     <main>
         <div class="archive-nav">
             <a href="#workshop-2026">📌 2026년 워크샵 바로가기</a>
             <a href="#workshop-2024">📌 2024년 워크샵 바로가기</a>
         </div>
 
-        <!-- 2026년 워크샵 카드 -->
         <div class="card" id="workshop-2026">
             <h2>2026년 돌봄로봇 워크샵</h2>
             <p>
                 한국돌봄로봇협동조합(KCCR)에서는 돌봄로봇 분야의 최신 기술 연구 성과와 현장 적용 방안을 공유하기 위하여 2026년 정기총회 및 워크샵을 성공적으로 개최하였습니다.
             </p>
-
             <table class="dates-table">
                 <thead>
                     <tr><th>구분</th><th>상세 정보</th></tr>
@@ -119,7 +101,6 @@
                     <tr><td><strong>문의처</strong></td><td>양희옥 과장 (010-8650-6994)</td></tr>
                 </tbody>
             </table>
-
             <h3 style="color: #1e3a8a; margin: 25px 0 12px;">프로그램 일정</h3>
             <table class="dates-table">
                 <thead>
@@ -136,7 +117,6 @@
                     <tr><td>17:20 ~ 18:00</td><td>종합 토의 & 마무리</td><td>참석자 전원</td></tr>
                 </tbody>
             </table>
-
             <h3 style="color: #1e3a8a; margin: 25px 0 15px;">행사 현장 갤러리</h3>
             <div class="gallery-grid">
                 <div class="gallery-item">
@@ -150,13 +130,11 @@
             </div>
         </div>
 
-        <!-- 2024년 워크샵 카드 -->
         <div class="card" id="workshop-2024">
             <h2>2024년 돌봄로봇 공개 워크샵</h2>
             <p>
-                한국의 급속한 고령화와 돌봄 인력 부족에 대응하고 돌봄로봇의 인식 제고 및 확산을 위해 개최된 2024년 돌봄로봇 공개 워크샵입니다[cite: 10, 11]. 국내외 돌봄로봇 기술 현황을 공유하고 현장 시연을 함께 진행하였습니다.
+                한국의 급속한 고령화와 돌봄 인력 부족에 대응하고 돌봄로봇의 인식 제고 및 확산을 위해 개최된 2024년 돌봄로봇 공개 워크샵입니다. 국내외 돌봄로봇 기술 현황을 공유하고 현장 시연을 함께 진행하였습니다.
             </p>
-
             <table class="dates-table">
                 <thead>
                     <tr><th>구분</th><th>상세 정보</th></tr>
@@ -169,7 +147,6 @@
                     <tr><td><strong>문의처</strong></td><td>양희옥 대리 (010-8650-6994), 김경환 이사장 (010-3716-3460)</td></tr>
                 </tbody>
             </table>
-
             <h3 style="color: #1e3a8a; margin: 25px 0 12px;">프로그램 일정</h3>
             <table class="dates-table">
                 <thead>
@@ -183,7 +160,6 @@
                     <tr><td>12:50 ~ 13:00</td><td>마무리</td><td>진행요원</td></tr>
                 </tbody>
             </table>
-
             <h3 style="color: #1e3a8a; margin: 25px 0 15px;">행사 현장 갤러리 (2024)</h3>
             <div class="gallery-grid">
                 <div class="gallery-item">
@@ -209,12 +185,8 @@
             </div>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 한국돌봄로봇협동조합 (Korea Cooperative of Care Robots, KCCR). All rights reserved.</p>
-    </footer>
+    <footer><p>&copy; 2026 한국돌봄로봇협동조합 (Korea Cooperative of Care Robots, KCCR). All rights reserved.</p></footer>
 </div>
-
 <script src="menu_kr.js"></script>
 </body>
 </html>

@@ -44,15 +44,12 @@
         .dates-table th, .dates-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; }
         .dates-table th { background-color: #f1f5f9; font-weight: 600; color: #0f172a; }
         .dates-table td:last-child { font-weight: 600; color: #1e3a8a; }
-        
-        /* 모집 주제 스타일 */
         .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin: 20px 0; }
         .topic-box { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 22px; border-top: 4px solid #0d9488; }
         .topic-box h3 { font-size: 1.2rem; color: #0f172a; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
         .topic-box ul { list-style: none; padding-left: 0; }
         .topic-box li { position: relative; padding-left: 18px; margin-bottom: 8px; font-size: 0.97rem; color: #334155; line-height: 1.5; }
         .topic-box li::before { content: "✓"; position: absolute; left: 0; color: #0d9488; font-weight: bold; }
-        
         .contact-box { background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 8px; padding: 18px; text-align: center; margin-top: 20px; }
         .contact-box a { color: #1e3a8a; font-weight: bold; text-decoration: none; }
         .download-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 20px; text-align: center; margin-bottom: 20px; }
@@ -87,94 +84,75 @@
     <main>
         <div class="card">
             <h2>Call for Papers (논문 및 포스터 모집 안내)</h2>
-            <p><strong>한국돌봄로봇협동조합 (Korea Cooperative of Care Robots, KCCR)</strong>에서는 초고령 사회 돌봄 문제를 해결하기 위한 기술 및 실증 연구 성과를 모집합니다[cite: 8].</p>
+            <p><strong>한국돌봄로봇협동조합 (Korea Cooperative of Care Robots, KCCR)</strong>에서는 초고령 사회 돌봄 문제를 해결하기 위한 기술 및 실증 연구 성과를 모집합니다.</p>
             
-            <!-- 모집 공고 PDF 다운로드 박스 -->
             <div class="download-box">
                 <p style="margin-bottom: 0; font-weight: 600;">논문 및 포스터 모집 안내(CFP) 다운로드</p>
                 <a href="CFP-Care Robot 2026 Seoul Korean.pdf" download="CFP-Care Robot 2026 Seoul Korean.pdf">📥 CFP 안내문 다운로드 (PDF)</a>
             </div>
 
-            <!-- 주요 모집 분야 (CFP 기반 추가) -->
             <h3 style="color:#1e3a8a; margin: 30px 0 10px;">주요 모집 분야 (Topics of Interest)</h3>
             <p style="font-size: 0.98rem; color: #64748b; margin-bottom: 16px;">
-                아래 명시된 세부 주제에 국한되지 않으며, 돌봄 로봇과 관련된 모든 창의적이고 실용적인 연구 및 발표를 적극 환영합니다[cite: 9].
+                아래 명시된 세부 주제에 국한되지 않으며, 돌봄 로봇과 관련된 모든 창의적이고 실용적인 연구 및 발표를 적극 환영합니다.
             </p>
 
             <div class="topics-grid">
-                <!-- 신체적 돌봄 -->
                 <div class="topic-box">
                     <h3>🦾 신체적 돌봄</h3>
                     <ul>
-                        <li>이동 및 이승 보조 로봇[cite: 9]</li>
-                        <li>착용형(웨어러블) 로봇[cite: 9]</li>
-                        <li>식사 및 일상 가사 지원 로봇[cite: 9]</li>
-                        <li>목욕 및 배설 돌봄 보조 기기[cite: 9]</li>
-                        <li>욕창 예방 및 자세 체위 변환 시스템[cite: 9]</li>
-                        <li>스마트 모니터링 및 원격 돌봄[cite: 9]</li>
-                        <li>상·하지 재활 및 작업치료 로봇[cite: 9]</li>
-                        <li>신체적 인간-로봇 상호작용 (pHRI)[cite: 9]</li>
-                        <li>소프트 로보틱스 (Soft Robotics)[cite: 9]</li>
-                        <li>돌봄 로봇 안전, 윤리, 표준화, 시험·인증[cite: 9]</li>
+                        <li>이동 및 이승 보조 로봇</li>
+                        <li>착용형(웨어러블) 로봇</li>
+                        <li>식사 및 일상 가사 지원 로봇</li>
+                        <li>목욕 및 배설 돌봄 보조 기기</li>
+                        <li>욕창 예방 및 자세 체위 변환 시스템</li>
+                        <li>스마트 모니터링 및 원격 돌봄</li>
+                        <li>상·하지 재활 및 작업치료 로봇</li>
+                        <li>신체적 인간-로봇 상호작용 (pHRI)</li>
+                        <li>소프트 로보틱스 (Soft Robotics)</li>
+                        <li>돌봄 로봇 안전, 윤리, 표준화, 시험·인증</li>
                     </ul>
                 </div>
 
-                <!-- 정신·인지 돌봄 -->
                 <div class="topic-box">
                     <h3>🧠 정신·인지 돌봄</h3>
                     <ul>
-                        <li>정서 지원 및 반려 로봇[cite: 9]</li>
-                        <li>인지장애·치매 케어 및 재활 로봇[cite: 9]</li>
-                        <li>AI 기반 맞춤형·개인화 돌봄 시스템[cite: 9]</li>
-                        <li>소셜 로봇 및 인간-로봇 상호작용 (HRI)[cite: 9]</li>
-                        <li>아동 돌봄 로봇 및 발달장애 지원[cite: 9]</li>
-                        <li>스마트 간호 지원 및 IoT 기반 돌봄 인프라[cite: 9]</li>
-                        <li>병원·요양시설 자율주행 서비스 로봇[cite: 9]</li>
-                        <li>낙상 감지·예방 및 응급대응 시스템[cite: 9]</li>
-                        <li>돌봄 부담 경감 및 간병 가족 지원[cite: 9]</li>
+                        <li>정서 지원 및 반려 로봇</li>
+                        <li>인지장애·치매 케어 및 재활 로봇</li>
+                        <li>AI 기반 맞춤형·개인화 돌봄 시스템</li>
+                        <li>소셜 로봇 및 인간-로봇 상호작용 (HRI)</li>
+                        <li>아동 돌봄 로봇 및 발달장애 지원</li>
+                        <li>스마트 간호 지원 및 IoT 기반 돌봄 인프라</li>
+                        <li>병원·요양시설 자율주행 서비스 로봇</li>
+                        <li>낙상 감지·예방 및 응급대응 시스템</li>
+                        <li>돌봄 부담 경감 및 간병 가족 지원</li>
                     </ul>
                 </div>
             </div>
 
             <h3 style="color:#1e3a8a; margin: 30px 0 10px;">발표 자료 및 규격</h3>
-            <p style="margin-bottom: 8px;"><strong>• 논문:</strong> 4쪽 이내 (구두 발표 또는 포스터)[cite: 9]</p>
-            <p style="margin-bottom: 20px;"><strong>• 포스터:</strong> 1쪽[cite: 9]</p>
+            <p style="margin-bottom: 8px;"><strong>• 논문:</strong> 4쪽 이내 (구두 발표 또는 포스터)</p>
+            <p style="margin-bottom: 20px;"><strong>• 포스터:</strong> 1쪽</p>
 
             <h3 style="color:#1e3a8a; margin: 25px 0 10px;">주요 일정</h3>
             <table class="dates-table">
                 <thead>
-                    <tr>
-                        <th>구분</th>
-                        <th>일정</th>
-                    </tr>
+                    <tr><th>구분</th><th>일정</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>사전 등록</strong></td>
-                        <td><strong>2026년 9월 1일 ~ 9월 30일</strong>[cite: 8]</td>
-                    </tr>
-                    <tr>
-                        <td>논문 / 포스터 제출 마감</td>
-                        <td>2026년 10월 12일[cite: 8, 9]</td>
-                    </tr>
-                    <tr>
-                        <td>심사 결과 통보</td>
-                        <td>2026년 10월 26일[cite: 8, 9]</td>
-                    </tr>
-                    <tr>
-                        <td>조기 등록 마감</td>
-                        <td>2026년 10월 31일[cite: 8, 9]</td>
-                    </tr>
+                    <tr><td><strong>사전 등록</strong></td><td><strong>2026년 9월 1일 ~ 9월 30일</strong></td></tr>
+                    <tr><td>논문 / 포스터 제출 마감</td><td>2026년 10월 12일</td></tr>
+                    <tr><td>심사 결과 통보</td><td>2026년 10월 26일</td></tr>
+                    <tr><td>조기 등록 마감</td><td>2026년 10월 31일</td></tr>
                 </tbody>
             </table>
 
             <div class="contact-box" style="margin-top:25px;">
-                접수 및 문의 이메일: <a href="mailto:kccrobot@gmail.com">kccrobot@gmail.com</a>[cite: 8, 9]
+                접수 및 문의 이메일: <a href="mailto:kccrobot@gmail.com">kccrobot@gmail.com</a>
             </div>
         </div>
     </main>
     <footer>
-        <p>&copy; 2026 한국돌봄로봇협동조합 (Korea Cooperative of Care Robots, KCCR). All rights reserved.[cite: 8]</p>
+        <p>&copy; 2026 한국돌봄로봇협동조합 (Korea Cooperative of Care Robots, KCCR). All rights reserved.</p>
     </footer>
 </div>
 <script src="menu_kr.js"></script>

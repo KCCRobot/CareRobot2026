@@ -4,47 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>홈 - Care Robot 2026</title>
-    <style>* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.6; display: flex; min-height: 100vh; }
-.sidebar { width: 260px; background-color: #1a1a1a; color: #ffffff; position: fixed; top: 0; left: 0; bottom: 0; padding: 35px 22px; overflow-y: auto; z-index: 100; }
-.sidebar-brand { font-size: 1.45rem; font-weight: 700; color: #ffffff; text-decoration: none; display: block; margin-bottom: 28px; letter-spacing: -0.01em; }
-.sidebar-menu { list-style: none; }
-.sidebar-menu li { margin-bottom: 14px; }
-.sidebar-menu a { color: #d1d5db; text-decoration: none; font-size: 1.02rem; display: block; font-weight: 400; transition: color 0.15s ease; }
-.sidebar-menu a:hover, .sidebar-menu a.active { color: #93c5fd; font-weight: 600; }
-.sidebar-menu .bold-item { font-weight: 700; }
-.menu-dropdown { cursor: pointer; }
-.menu-dropdown-title { display: flex; align-items: center; gap: 8px; font-size: 1.02rem; color: #ffffff; user-select: none; }
-.menu-dropdown-title .arrow { font-size: 0.75rem; transition: transform 0.2s; }
-.submenu { display: none; list-style: none; padding-left: 18px; margin-top: 8px; }
-.menu-dropdown.open .submenu { display: block; }
-.submenu li { margin-bottom: 8px; }
-.submenu a { font-size: 0.92rem; color: #9ca3af; }
-.submenu a:hover, .submenu a.active { color: #ffffff; }
-.main-wrapper { margin-left: 260px; flex: 1; display: flex; flex-direction: column; min-width: 0; }
-.top-lang-bar { display: flex; justify-content: flex-end; align-items: center; padding: 12px 30px; background-color: #0f172a; border-bottom: 1px solid #1e293b; }
-.lang-switch { display: inline-flex; align-items: center; gap: 12px; font-size: 1.05rem; font-weight: 700; }
-.lang-switch .globe-icon { font-size: 1.25rem; margin-right: 2px; }
-.lang-switch a { text-decoration: none; color: #94a3b8; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 6px; transition: all 0.2s ease; }
-.lang-switch a:hover { color: #ffffff; background: rgba(255, 255, 255, 0.08); }
-.lang-switch a.active { color: #0d9488; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
-.lang-switch .divider { color: #475569; font-weight: 300; }
-header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: white; padding: 50px 25px 40px; text-align: center; border-bottom: 4px solid #0d9488; }
-.header-container { max-width: 900px; margin: 0 auto; }
-.badge { display: inline-block; background-color: rgba(13, 148, 136, 0.3); border: 1px solid #0d9488; color: #5eead4; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; }
-h1.conf-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; color: #ffffff; }
-.conf-subtitle { font-size: 1.2rem; color: #93c5fd; margin-bottom: 18px; }
-.conf-meta { display: inline-flex; gap: 20px; flex-wrap: wrap; font-size: 1.02rem; color: #e2e8f0; background: rgba(255, 255, 255, 0.08); padding: 10px 22px; border-radius: 8px; }
-main { max-width: 960px; margin: 35px auto; padding: 0 25px; width: 100%; }
-.card { background: white; border-radius: 10px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
-.card h2 { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 15px; border-left: 4px solid #0d9488; padding-left: 10px; }
-.card p { font-size: 1.02rem; line-height: 1.75; margin-bottom: 14px; }
-.dates-table, .fee-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-.dates-table th, .dates-table td, .fee-table th, .fee-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; }
-.dates-table th, .fee-table th { background-color: #f1f5f9; font-weight: 600; color: #0f172a; }
-.dates-table td:last-child, .fee-table td:last-child { font-weight: 600; color: #1e3a8a; }
-footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94a3b8; font-size: 0.88rem; margin-top: auto; }
-@media (max-width: 768px) { .sidebar { position: relative; width: 100%; height: auto; } .main-wrapper { margin-left: 0; } body { flex-direction: column; } }</style>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.6; display: flex; min-height: 100vh; }
+        .sidebar { width: 260px; background-color: #1a1a1a; color: #ffffff; position: fixed; top: 0; left: 0; bottom: 0; padding: 35px 22px; overflow-y: auto; z-index: 100; }
+        .sidebar-brand { font-size: 1.45rem; font-weight: 700; color: #ffffff; text-decoration: none; display: block; margin-bottom: 28px; letter-spacing: -0.01em; }
+        .sidebar-menu { list-style: none; }
+        .sidebar-menu li { margin-bottom: 14px; }
+        .sidebar-menu a { color: #d1d5db; text-decoration: none; font-size: 1.02rem; display: block; font-weight: 400; transition: color 0.15s ease; }
+        .sidebar-menu a:hover, .sidebar-menu a.active { color: #93c5fd; font-weight: 600; }
+        .sidebar-menu .bold-item { font-weight: 700; }
+        .menu-dropdown { cursor: pointer; }
+        .menu-dropdown-title { display: flex; align-items: center; gap: 8px; font-size: 1.02rem; color: #ffffff; user-select: none; }
+        .menu-dropdown-title .arrow { font-size: 0.75rem; transition: transform 0.2s; }
+        .submenu { display: none; list-style: none; padding-left: 18px; margin-top: 8px; }
+        .menu-dropdown.open .submenu { display: block; }
+        .submenu li { margin-bottom: 8px; }
+        .submenu a { font-size: 0.92rem; color: #9ca3af; }
+        .submenu a:hover, .submenu a.active { color: #ffffff; }
+        .main-wrapper { margin-left: 260px; flex: 1; display: flex; flex-direction: column; min-width: 0; }
+        .top-lang-bar { display: flex; justify-content: flex-end; align-items: center; padding: 12px 30px; background-color: #0f172a; border-bottom: 1px solid #1e293b; }
+        .lang-switch { display: inline-flex; align-items: center; gap: 12px; font-size: 1.05rem; font-weight: 700; }
+        .lang-switch .globe-icon { font-size: 1.25rem; margin-right: 2px; }
+        .lang-switch a { text-decoration: none; color: #94a3b8; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 6px; transition: all 0.2s ease; }
+        .lang-switch a:hover { color: #ffffff; background: rgba(255, 255, 255, 0.08); }
+        .lang-switch a.active { color: #0d9488; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+        .lang-switch .divider { color: #475569; font-weight: 300; }
+        header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: white; padding: 50px 25px 40px; text-align: center; border-bottom: 4px solid #0d9488; }
+        .header-container { max-width: 900px; margin: 0 auto; }
+        .badge { display: inline-block; background-color: rgba(13, 148, 136, 0.3); border: 1px solid #0d9488; color: #5eead4; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; }
+        h1.conf-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; color: #ffffff; }
+        .conf-subtitle { font-size: 1.2rem; color: #93c5fd; margin-bottom: 18px; }
+        .conf-meta { display: inline-flex; gap: 20px; flex-wrap: wrap; font-size: 1.02rem; color: #e2e8f0; background: rgba(255, 255, 255, 0.08); padding: 10px 22px; border-radius: 8px; }
+        main { max-width: 960px; margin: 35px auto; padding: 0 25px; width: 100%; }
+        .card { background: white; border-radius: 10px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
+        .card h2 { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 15px; border-left: 4px solid #0d9488; padding-left: 10px; }
+        .card p { font-size: 1.02rem; line-height: 1.75; margin-bottom: 14px; }
+        .welcome-notice-box { background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border: 1px solid #99f6e4; border-left: 5px solid #0d9488; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+        .welcome-notice-box h3 { margin: 0 0 8px 0; color: #0f766e; font-size: 1.15rem; display: flex; align-items: center; gap: 8px; }
+        .welcome-notice-box p { margin: 0; color: #1e293b; font-size: 1rem; line-height: 1.7; }
+        .dates-table, .fee-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .dates-table th, .dates-table td, .fee-table th, .fee-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        .dates-table th, .fee-table th { background-color: #f1f5f9; font-weight: 600; color: #0f172a; }
+        .dates-table td:last-child, .fee-table td:last-child { font-weight: 600; color: #1e3a8a; }
+        footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94a3b8; font-size: 0.88rem; margin-top: auto; }
+        @media (max-width: 768px) { .sidebar { position: relative; width: 100%; height: auto; } .main-wrapper { margin-left: 0; } body { flex-direction: column; } }
+    </style>
 </head>
 <body>
 <div id="sidebar-container"></div>
@@ -62,9 +67,21 @@ footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94
         <div class="card">
             <h2>Care Robot 2026 개최 안내</h2>
             <p><strong>한국 돌봄로봇 협동조합 (Korea Co-op of Care Robots, KCCR)</strong>이 주최하는 본 행사는 초고령 사회의 핵심 솔루션인 돌봄로봇 기술 연구 성과와 산업 트렌드를 한눈에 확인할 수 있는 교류의 장입니다. 행사는 <strong>2026년 11월 26일(목)</strong>에 개최됩니다.</p>
+            
+            <!-- 참관객 환영 및 사전등록 안내 박스 -->
+            <div class="welcome-notice-box">
+                <h3>📢 참관객 환영 및 사전등록 안내</h3>
+                <p>
+                    <strong>논문/포스터 발표자나 공모전 제출자가 아니더라도 행사에 참석하시는 모든 분들을 진심으로 환영합니다.</strong><br>
+                    행사장의 원활한 준비와 좌석 운영을 위해, <strong>부득이한 경우를 제외하고는 가급적 사전에 등록(사전등록)을 완료해 주시기 바랍니다.</strong>
+                </p>
+                <p style="margin-top: 8px;">
+                    👉 <a href="registration_kr.html" style="color: #0f766e; font-weight: 700; text-decoration: underline;">사전등록 바로가기</a>
+                </p>
+            </div>
         </div>
         
-        <!-- 주요 일정을 공모전 안내보다 상단에 배치 -->
+        <!-- 주요 일정 -->
         <div class="card">
             <h2>주요 일정 (Important Dates)</h2>
             <table class="dates-table">

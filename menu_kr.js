@@ -22,41 +22,17 @@
             </li>
             <li><a href="registration_kr.html">사전 등록</a></li>
             <li><a href="organizing-committee_kr.html">조직위원회</a></li>
-            <li><a href="sponsorship_kr.html">후원 전시</a></li>
+            <li><a href="sponsorship_kr.html">전시·후원</a></li>
             <li><a href="contest_kr.html">공모전</a></li>
             <li><a href="about_kr.html">협동조합 소개</a></li>
             <li><a href="archive_kr.html">이전 행사</a></li>
         </ul>
-        <!-- 좌측 사이드바 하단 KCCR 로고 링크 -->
         <div style="margin-top: 25px; padding-top: 18px; border-top: 1px solid #333; text-align: center;">
             <a href="https://www.kccrobot.com/index.html" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 6px; border-radius: 8px; transition: opacity 0.2s;" title="조합 공식 홈페이지 바로가기 (국문)">
-                <img id="sidebar-kccr-logo-kr" 
-                     src="photos/kccr_logo.png" 
-                     alt="한국돌봄로봇협동조합 로고" 
-                     onerror="tryFallbackLogos(this)" 
-                     style="max-width: 140px; height: auto; display: block; margin: 0 auto; filter: brightness(0.95);">
+                <img id="sidebar-kccr-logo-kr" src="photos/kccr_logo.png" alt="한국돌봄로봇협동조합 로고" style="max-width: 140px; height: auto; display: block; margin: 0 auto; filter: brightness(0.95);">
             </a>
         </div>
     </nav>`;
-
-    window.tryFallbackLogos = function(img) {
-        const fallbacks = [
-            '/photos/kccr_logo.png',
-            'photos/kccr_logo.jpg',
-            '/photos/kccr_logo.jpg',
-            'photos/kccr_logo.PNG',
-            'photos/kccr_logo.JPG',
-            'photos/kccr_logo.webp'
-        ];
-        let idx = parseInt(img.getAttribute('data-fallback-idx') || '0', 10);
-        if (idx < fallbacks.length) {
-            img.setAttribute('data-fallback-idx', idx + 1);
-            img.src = fallbacks[idx];
-        } else {
-            img.onerror = null;
-            img.style.display = 'none';
-        }
-    };
 
     document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById('sidebar-container');

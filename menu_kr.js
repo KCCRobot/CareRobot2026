@@ -8,8 +8,8 @@
                 <div class="menu-dropdown-title"><span class="arrow">∨</span> 프로그램</div>
                 <ul class="submenu">
                     <li><a href="schedule_kr.html">전체 일정표</a></li>
-                    <li><a href="presentations_kr.html">발표 세션</a></li>
                     <li><a href="keynotes_kr.html">초청 강연</a></li>
+                    <li><a href="presentations_kr.html">발표 세션</a></li>
                     <li><a href="exhibition_kr.html">전시회</a></li>
                 </ul>
             </li>

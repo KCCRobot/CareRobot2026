@@ -8,8 +8,8 @@
                 <div class="menu-dropdown-title"><span class="arrow">∨</span> Program</div>
                 <ul class="submenu">
                     <li><a href="schedule.html">Schedule at a Glance</a></li>
-                    <li><a href="presentations.html">Presentations</a></li>
                     <li><a href="keynotes.html">Keynote Talks</a></li>
+                    <li><a href="presentations.html">Presentations</a></li>
                     <li><a href="exhibition.html">Exhibition</a></li>
                     <li><a href="tours.html">Industrial Tours & B2B</a></li>
                 </ul>

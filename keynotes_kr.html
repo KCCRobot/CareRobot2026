@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>기조강연 및 특별강연 - Care Robot 2026</title>
+    <title>기조연설 및 강연 - Care Robot 2026</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.6; display: flex; min-height: 100vh; }
@@ -40,6 +40,7 @@
         .card { background: white; border-radius: 10px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
         .card h2 { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 20px; border-left: 4px solid #0d9488; padding-left: 10px; }
         .speaker-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 26px; margin-bottom: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .speaker-card:last-child { margin-bottom: 0; }
         .speaker-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid #f1f5f9; padding-bottom: 16px; margin-bottom: 16px; }
         .speaker-photo { width: 120px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid #e2e8f0; flex-shrink: 0; }
         .speaker-info { flex: 1; min-width: 200px; }
@@ -69,9 +70,9 @@
     </div>
     <header>
         <div class="header-container">
-            <div class="badge">기조강연 및 특별강연</div>
+            <div class="badge">기조연설 및 강연</div>
             <h1 class="conf-title">Care Robot 2026</h1>
-            <div class="conf-subtitle">기조강연 및 특별강연 연사 안내</div>
+            <div class="conf-subtitle">기조연설 및 초청 연사 안내</div>
             <div class="conf-meta">
                 <span>📅 2026년 11월 26일</span>
                 <span>📍 서울 연세재단 세브란스빌딩</span>
@@ -79,10 +80,9 @@
         </div>
     </header>
     <main>
-        <!-- 기조강연 섹션 -->
+        <!-- 1. 기조연설: 송원경 박사 -->
         <div class="card">
-            <h2>기조강연 (Keynote Speech)</h2>
-            
+            <h2>기조연설 (Keynote Address)</h2>
             <div class="speaker-card">
                 <div class="speaker-header">
                     <img src="photos/wonkyung%20song.png" alt="송원경 박사" class="speaker-photo" onerror="this.src='photos/wonkyung song.png'; this.onerror=function(){this.src='https://via.placeholder.com/120x150?text=Photo';};">
@@ -94,7 +94,7 @@
                             <div class="speaker-talk-title">한국 돌봄로봇의 최신 동향과 미래 발전 방향 (Recent Trends and Future Directions of Care Robots in Korea)</div>
                         </div>
                     </div>
-                    <span class="speaker-tag">기조강연</span>
+                    <span class="speaker-tag">Keynote Address</span>
                 </div>
                 <div class="speaker-bio">
                     <p>송원경 박사는 국립재활원(NRC)의 재활 및 돌봄로봇 분야를 이끄는 대표적인 연구자입니다. 현재 국립재활원에서 재활보조기술연구과장, 재활로봇중개연구사업단장, 그리고 수요자 중심 돌봄로봇 및 서비스 실증 R&D 사업단장을 맡고 있습니다.</p>
@@ -105,10 +105,89 @@
             </div>
         </div>
 
-        <!-- 특별강연 섹션 -->
+        <!-- 2. 현장 대담: 조혜숙 원장 -->
+        <div class="card">
+            <h2>현장 대담 (Special Field Dialogue)</h2>
+            <div class="speaker-card">
+                <div class="speaker-header">
+                    <img src="photos/hyesookcho.jpg" alt="조혜숙 원장" class="speaker-photo" onerror="this.src='photos/hyesookcho.png'; this.onerror=function(){this.src='https://via.placeholder.com/120x150?text=Photo';};">
+                    <div class="speaker-info">
+                        <div class="speaker-name">조혜숙 원장 (간호학 박사)</div>
+                        <div class="speaker-org">너싱홈그린힐</div>
+                        <div class="speaker-title-box">
+                            <div class="speaker-title-label">강연 제목</div>
+                            <div class="speaker-talk-title">[현장 대담]: 수요자 중심의 돌봄로봇, 현장에서 길을 묻다.</div>
+                        </div>
+                    </div>
+                    <span class="speaker-tag">Special Field Dialogue</span>
+                </div>
+                <div class="speaker-bio">
+                    <p>조혜숙 원장님은 간호학 박사로 2000년 7월부터 현재까지 너싱홈그린힐 원장으로 재직 중이며, 2007년 3월부터 이화여자대학교 간호학부 겸임교수로 활동하고 있습니다.</p>
+                </div>
+                <div class="speaker-bio">
+                    <p>또한 대한간호협회 가정간호사회 회장(2004.03~2008.03), 한국너싱홈협회 회장(2008.03~2011.03), 대한간호협회 노인간호사회 회장(2011.03~2013.03)을 역임하며 국내 돌봄 및 노인 간호 분야의 발전을 헌신적으로 이끌어 오셨습니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 산업 강연: Bob Chiang & Masahiro Satono -->
+        <div class="card">
+            <h2>산업 강연 (Industry Talk)</h2>
+            
+            <!-- Bob Chiang -->
+            <div class="speaker-card">
+                <div class="speaker-header">
+                    <img src="photos/bob-chiang.jpg" alt="Bob Chiang" class="speaker-photo" onerror="this.src='https://via.placeholder.com/120x150?text=Photo';">
+                    <div class="speaker-info">
+                        <div class="speaker-name">Mr. Bob Chiang</div>
+                        <div class="speaker-org">FREE Bionics / FREE Bionics Japan</div>
+                        <div class="speaker-title-box">
+                            <div class="speaker-title-label">강연 제목</div>
+                            <div class="speaker-talk-title">보행의 재배선: 현대 재활 치료에서의 AI 기반 외골격 로봇 (Rewiring the Walk: AI-Powered Exoskeletons in Modern Rehab)</div>
+                        </div>
+                    </div>
+                    <span class="speaker-tag">Industry Talk</span>
+                </div>
+                <div class="speaker-bio">
+                    <p>파워 외골격(powered exoskeletons), 웨어러블 로보틱스 및 국제 시장 개발 전문가입니다.</p>
+                </div>
+                <div class="speaker-bio">
+                    <p>수백 명의 임상가, 고객 및 파트너와 협력하여 <strong>100개 이상의 병원 및 기관</strong>에 도입을 지원했습니다.</p>
+                </div>
+                <div class="speaker-bio">
+                    <p><strong>10개 이상의 국제 시장</strong>을 담당하고 있으며, 현지 시장 역학, 유통업체 및 경쟁 구도에 대한 깊은 전문성을 보유하고 있습니다.</p>
+                </div>
+                <div class="speaker-bio">
+                    <p><strong>주요 관심 분야:</strong> 재활, 이동 보조 및 액티브 에이징 (Active Aging)</p>
+                </div>
+            </div>
+
+            <!-- Masahiro Satono -->
+            <div class="speaker-card" style="margin-top: 24px;">
+                <div class="speaker-header">
+                    <img src="photos/masahiro-satono.jpg" alt="Masahiro Satono" class="speaker-photo" onerror="this.src='https://via.placeholder.com/120x150?text=Photo';">
+                    <div class="speaker-info">
+                        <div class="speaker-name">Mr. Masahiro Satono</div>
+                        <div class="speaker-org">WACOH-TECH Inc.</div>
+                        <div class="speaker-title-box">
+                            <div class="speaker-title-label">강연 제목</div>
+                            <div class="speaker-talk-title">“힘을 ‘감지하는’ 로봇이 노인 돌봄을 변화시키고 있다: DynPick(다인픽)이 개척한 힘 센싱의 응용” (“Robots That ‘Sense’ Force Are Transforming Elderly Care: Applications of Force Sensing Pioneered by DynPick®”)</div>
+                        </div>
+                    </div>
+                    <span class="speaker-tag">Industry Talk</span>
+                </div>
+                <div class="speaker-bio">
+                    <p>힘은 로봇이 사람과 상호작용하는 데 있어 필수적인 정보입니다. 6축 힘 센서 “DynPick(다인픽)”은 정전기 용량 기술을 활용하여 낮은 비용과 높은 신뢰성을 결합했으며, 일본 시장 점유율 1위로서 주로 제조업을 중심으로 이미 널리 사용되고 있습니다.</p>
+                </div>
+                <div class="speaker-bio">
+                    <p>본 발표에서는 DynPick(다인픽)의 특징과 활용 사례를 소개하고, 돌봄 및 복지 로봇에서의 잠재적 응용 가능성과 새로운 시장 기회에 대한 통찰을 제시합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 특별강연: 김종배 교수 -->
         <div class="card">
             <h2>특별강연 (Special Lecture)</h2>
-            
             <div class="speaker-card">
                 <div class="speaker-header">
                     <img src="photos/jongbae%20kim.png" alt="김종배 교수" class="speaker-photo" onerror="this.src='photos/jongbae kim.png'; this.onerror=function(){this.src='https://via.placeholder.com/120x150?text=Photo';};">
@@ -120,40 +199,13 @@
                             <div class="speaker-talk-title">전동 휠체어의 로봇화 (Transforming the Power Wheelchair into a Robot)</div>
                         </div>
                     </div>
-                    <span class="speaker-tag">특별강연</span>
+                    <span class="speaker-tag">Special Lecture</span>
                 </div>
                 <div class="speaker-bio">
                     <p>김종배 교수는 연세대학교 작업치료학과 교수이자 복합재활기술연구소(첨단재활의료기술연구소) 재활공학부장으로 재직 중입니다. 1980~1983년 피츠버그대학교에서 응용통계를 전공하고, KAIST 산업공학과 석사를 거쳐 미국 피츠버그대학교 재활과학기술학과에서 박사 학위를 취득했습니다(2005년).</p>
                 </div>
                 <div class="speaker-bio">
                     <p>피츠버그대학교 연구원 및 조교수를 거쳐 국립재활원 연구소장(부장) 및 재활로봇중개연구센터장을 역임했으며, 피츠버그대학교 겸임교수 및 연세대학교 교수(현 방문교수)로 활동하고 있습니다. 또한 한국휠체어럭비협회 회장 및 (주)MLP 대표이사를 맡아 재활 공학 및 장애인 스포츠 분야 발전에 크게 기여하고 있습니다.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 영상 대담 섹션 -->
-        <div class="card">
-            <h2>영상 대담 (Video Dialogue)</h2>
-            
-            <div class="speaker-card">
-                <div class="speaker-header">
-                    <!-- 공백(%20) 인코딩 처리 및 fallback 확장자 추가 -->
-                    <img src="photos/hyesookcho.jpg" alt="조혜숙 원장" class="speaker-photo" onerror="this.src='photos/heysook%20cho.png'; this.onerror=function(){this.src='https://via.placeholder.com/120x150?text=Photo';};">
-                    <div class="speaker-info">
-                        <div class="speaker-name">조혜숙 원장 (간호학 박사)</div>
-                        <div class="speaker-org">너싱홈그린힐</div>
-                        <div class="speaker-title-box">
-                            <div class="speaker-title-label">강연 제목</div>
-                            <div class="speaker-talk-title">[영상 대담]: 수요자 중심의 돌봄로봇, 현장에서 길을 묻다.</div>
-                        </div>
-                    </div>
-                    <span class="speaker-tag">영상 대담</span>
-                </div>
-                <div class="speaker-bio">
-                    <p>조혜숙 원장님은 간호학 박사로 2000년 7월부터 현재까지 너싱홈그린힐 원장으로 재직 중이며, 2007년 3월부터 이화여자대학교 간호학부 겸임교수로 활동하고 있습니다.</p>
-                </div>
-                <div class="speaker-bio">
-                    <p>또한 대한간호협회 가정간호사회 회장(2004.03~2008.03), 한국너싱홈협회 회장(2008.03~2011.03), 대한간호협회 노인간호사회 회장(2011.03~2013.03)을 역임하며 국내 돌봄 및 노인 간호 분야의 발전을 헌신적으로 이끌어 오셨습니다.</p>
                 </div>
             </div>
         </div>

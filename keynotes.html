@@ -13,9 +13,19 @@
         .sidebar-menu li { margin-bottom: 14px; }
         .sidebar-menu a { color: #d1d5db; text-decoration: none; font-size: 1.02rem; display: block; font-weight: 400; transition: color 0.15s ease; }
         .sidebar-menu a:hover, .sidebar-menu a.active { color: #93c5fd; font-weight: 600; }
+        .sidebar-menu .bold-item { font-weight: 700; }
+        .menu-dropdown { cursor: pointer; }
+        .menu-dropdown-title { display: flex; align-items: center; gap: 8px; font-size: 1.02rem; color: #ffffff; user-select: none; }
+        .menu-dropdown-title .arrow { font-size: 0.75rem; transition: transform 0.2s; }
+        .submenu { display: none; list-style: none; padding-left: 18px; margin-top: 8px; }
+        .menu-dropdown.open .submenu { display: block; }
+        .submenu li { margin-bottom: 8px; }
+        .submenu a { font-size: 0.92rem; color: #9ca3af; }
+        .submenu a:hover, .submenu a.active { color: #ffffff; }
         .main-wrapper { margin-left: 260px; flex: 1; display: flex; flex-direction: column; min-width: 0; }
         .top-lang-bar { display: flex; justify-content: flex-end; align-items: center; padding: 12px 30px; background-color: #0f172a; border-bottom: 1px solid #1e293b; }
         .lang-switch { display: inline-flex; align-items: center; gap: 12px; font-size: 1.05rem; font-weight: 700; }
+        .lang-switch .globe-icon { font-size: 1.25rem; margin-right: 2px; }
         .lang-switch a { text-decoration: none; color: #94a3b8; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 6px; transition: all 0.2s ease; }
         .lang-switch a:hover { color: #ffffff; background: rgba(255, 255, 255, 0.08); }
         .lang-switch a.active { color: #0d9488; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
@@ -32,7 +42,7 @@
         .speaker-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 26px; margin-bottom: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         .speaker-card:last-child { margin-bottom: 0; }
         .speaker-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid #f1f5f9; padding-bottom: 16px; margin-bottom: 16px; }
-        .speaker-photo { width: 120px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid #e2e8f0; flex-shrink: 0; background-color: #e2e8f0; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 0.85rem; text-align: center; }
+        .speaker-photo { width: 120px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid #e2e8f0; flex-shrink: 0; }
         .speaker-info { flex: 1; min-width: 200px; }
         .speaker-name { font-size: 1.35rem; font-weight: 700; color: #0f172a; }
         .speaker-org { font-size: 0.95rem; color: #0d9488; font-weight: 600; margin-top: 4px; }
@@ -48,28 +58,16 @@
     </style>
 </head>
 <body>
-<!-- Built-in Sidebar -->
-<nav class="sidebar">
-    <a href="index.html" class="sidebar-brand">Care Robot 2026</a>
-    <ul class="sidebar-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="overview.html">Overview</a></li>
-        <li><a href="keynotes.html" class="active">Keynotes & Speakers</a></li>
-        <li><a href="program.html">Program</a></li>
-        <li><a href="location.html">Location</a></li>
-    </ul>
-</nav>
-
+<div id="sidebar-container"></div>
 <div class="main-wrapper">
     <div class="top-lang-bar">
         <div class="lang-switch">
-            <span style="font-size: 1.25rem; margin-right: 2px;">🌐</span>
+            <span class="globe-icon">🌐</span>
             <a href="keynotes_kr.html"><span style="font-size:1.15rem;">🇰🇷</span> KOR</a>
             <span class="divider">|</span>
             <a href="keynotes.html" class="active"><span style="font-size:1.15rem;">🇺🇸</span> ENG</a>
         </div>
     </div>
-    
     <header>
         <div class="header-container">
             <div class="badge">Keynotes & Invited Speakers</div>
@@ -81,14 +79,13 @@
             </div>
         </div>
     </header>
-    
     <main>
         <!-- 1. Keynote Address: Dr. Wonkyung Song -->
         <div class="card">
             <h2>Keynote Address</h2>
             <div class="speaker-card">
                 <div class="speaker-header">
-                    <img src="photos/wonkyung%20song.png" alt="Dr. Wonkyung Song" class="speaker-photo" onerror="this.style.display='flex'; this.outerHTML='<div class=\'speaker-photo\'>Dr. Wonkyung Song</div>';">
+                    <img src="photos/wonkyung%20song.png" alt="Dr. Wonkyung Song" class="speaker-photo" onerror="this.src='photos/wonkyung song.png'; this.onerror=function(){this.src='https://via.placeholder.com/120x150?text=Photo';};">
                     <div class="speaker-info">
                         <div class="speaker-name">Dr. Wonkyung Song</div>
                         <div class="speaker-org">National Rehabilitation Center (NRC)</div>
@@ -113,7 +110,7 @@
             <h2>Special Field Dialogue</h2>
             <div class="speaker-card">
                 <div class="speaker-header">
-                    <img src="photos/hyesookcho.jpg" alt="Director Hyesook Cho" class="speaker-photo" onerror="this.style.display='flex'; this.outerHTML='<div class=\'speaker-photo\'>Director Hyesook Cho</div>';">
+                    <img src="photos/hyesookcho.jpg" alt="Director Hyesook Cho" class="speaker-photo" onerror="this.src='photos/hyesookcho.png'; this.onerror=function(){this.src='https://via.placeholder.com/120x150?text=Photo';};">
                     <div class="speaker-info">
                         <div class="speaker-name">Director Hyesook Cho (Ph.D. in Nursing)</div>
                         <div class="speaker-org">Nursing Home Green Hill</div>
@@ -133,39 +130,14 @@
             </div>
         </div>
 
-        <!-- 3. Special Lecture: Prof. Jongbae Kim -->
-        <div class="card">
-            <h2>Special Lecture</h2>
-            <div class="speaker-card">
-                <div class="speaker-header">
-                    <img src="photos/jongbae%20kim.png" alt="Prof. Jongbae Kim" class="speaker-photo" onerror="this.style.display='flex'; this.outerHTML='<div class=\'speaker-photo\'>Prof. Jongbae Kim</div>';">
-                    <div class="speaker-info">
-                        <div class="speaker-name">Prof. Jongbae Kim (Ph.D.)</div>
-                        <div class="speaker-org">CEO, MLP Inc. & (Former) Professor, Department of Occupational Therapy, Yonsei University</div>
-                        <div class="speaker-title-box">
-                            <div class="speaker-title-label">Presentation Title</div>
-                            <div class="speaker-talk-title">Transforming the Power Wheelchair into a Robot</div>
-                        </div>
-                    </div>
-                    <span class="speaker-tag">Special Lecture</span>
-                </div>
-                <div class="speaker-bio">
-                    <p>Professor Jongbae Kim served as a professor in the Department of Occupational Therapy at Yonsei University and Head of the Rehabilitation Engineering Division at the Advanced Rehabilitation Medical Technology Research Institute. He majored in Applied Statistics at the University of Pittsburgh (1980–1983), received his Master's degree in Industrial Engineering from KAIST, and earned his Ph.D. in Rehabilitation Science and Technology from the University of Pittsburgh in 2005.</p>
-                </div>
-                <div class="speaker-bio">
-                    <p>After working as a researcher and assistant professor at the University of Pittsburgh, he served as the Director (Head) of the Research Institute and Director of the Rehabilitation Robot Translation Research Center at the National Rehabilitation Center. He has also served as an adjunct professor at the University of Pittsburgh and Yonsei University. Additionally, he serves as the President of the Korea Wheelchair Rugby Association and CEO of MLP Inc., making significant contributions to the fields of rehabilitation engineering and adaptive sports for individuals with disabilities.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4. Industry Talk: Bob Chiang & Masahiro Satono -->
+        <!-- 3. Industry Talk: Bob Chiang & Masahiro Satono -->
         <div class="card">
             <h2>Industry Talk</h2>
             
             <!-- Bob Chiang -->
             <div class="speaker-card">
                 <div class="speaker-header">
-                    <img src="photos/bob-chiang.jpg" alt="Bob Chiang" class="speaker-photo" onerror="this.style.display='flex'; this.outerHTML='<div class=\'speaker-photo\'>Bob Chiang</div>';">
+                    <img src="photos/bob-chiang.jpg" alt="Bob Chiang" class="speaker-photo" onerror="this.src='https://via.placeholder.com/120x150?text=Photo';">
                     <div class="speaker-info">
                         <div class="speaker-name">Mr. Bob Chiang</div>
                         <div class="speaker-org">FREE Bionics / FREE Bionics Japan</div>
@@ -193,10 +165,10 @@
             <!-- Masahiro Satono -->
             <div class="speaker-card" style="margin-top: 24px;">
                 <div class="speaker-header">
-                    <img src="photos/masahiro-satono.jpg" alt="Masahiro Satono" class="speaker-photo" onerror="this.style.display='flex'; this.outerHTML='<div class=\'speaker-photo\'>Masahiro Satono</div>';">
+                    <img src="photos/masahiro-satono.jpg" alt="Masahiro Satono" class="speaker-photo" onerror="this.src='https://via.placeholder.com/120x150?text=Photo';">
                     <div class="speaker-info">
                         <div class="speaker-name">Mr. Masahiro Satono</div>
-                        <div class="speaker-org">WACOH-TECH Inc.</div>
+                        <div class="speaker-org">WACOH-TECH Inc. — Sales Department Manager</div>
                         <div class="speaker-title-box">
                             <div class="speaker-title-label">Presentation Title</div>
                             <div class="speaker-talk-title">“Robots That ‘Sense’ Force Are Transforming Elderly Care: Applications of Force Sensing Pioneered by DynPick®”</div>
@@ -205,10 +177,38 @@
                     <span class="speaker-tag">Industry Talk</span>
                 </div>
                 <div class="speaker-bio">
-                    <p>Force is essential information for robots interacting with humans. The 6-axis force sensor "DynPick®" combines low cost and high reliability utilizing electrostatic capacitance technology, and is already widely used primarily in the manufacturing sector as Japan's top market share holder.</p>
+                    <p>Force is essential information for robots interacting with humans. The 6-axis force sensor "DynPick®" combines low cost and high reliability utilizing capacitive force sensor technology, and is already widely used primarily in the manufacturing sector as Japan's top market share holder.</p>
                 </div>
                 <div class="speaker-bio">
                     <p>This presentation introduces the features and use cases of DynPick®, providing insights into its potential applications in care and welfare robotics and new market opportunities.</p>
+                </div>
+                <div class="speaker-bio">
+                    <p>Presenter Mr. Masahiro Satono has built his career on the front lines of sales for over 8 years, currently serving as the "face" of the company, fostering strong relationships of trust with customers throughout Japan and contributing to sales. He is highly regarded for his ability to make accurate proposals based on extensive practical experience and his customer-first approach.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Special Lecture: Prof. Jongbae Kim -->
+        <div class="card">
+            <h2>Special Lecture</h2>
+            <div class="speaker-card">
+                <div class="speaker-header">
+                    <img src="photos/jongbae%20kim.png" alt="Prof. Jongbae Kim" class="speaker-photo" onerror="this.src='photos/jongbae kim.png'; this.onerror=function(){this.src='https://via.placeholder.com/120x150?text=Photo';};">
+                    <div class="speaker-info">
+                        <div class="speaker-name">Prof. Jongbae Kim (Ph.D.)</div>
+                        <div class="speaker-org">Yonsei University / Head of Rehabilitation Engineering Division, Advanced Rehabilitation Medical Technology Research Institute</div>
+                        <div class="speaker-title-box">
+                            <div class="speaker-title-label">Presentation Title</div>
+                            <div class="speaker-talk-title">Transforming the Power Wheelchair into a Robot</div>
+                        </div>
+                    </div>
+                    <span class="speaker-tag">Special Lecture</span>
+                </div>
+                <div class="speaker-bio">
+                    <p>Professor Jongbae Kim served as a professor in the Department of Occupational Therapy at Yonsei University and Head of the Rehabilitation Engineering Division at the Advanced Rehabilitation Medical Technology Research Institute. He majored in Applied Statistics at the University of Pittsburgh (1980–1983), received his Master's degree in Industrial Engineering from KAIST, and earned his Ph.D. in Rehabilitation Science and Technology from the University of Pittsburgh in 2005.</p>
+                </div>
+                <div class="speaker-bio">
+                    <p>After working as a researcher and assistant professor at the University of Pittsburgh, he served as the Director (Head) of the Research Institute and Director of the Rehabilitation Robot Translation Research Center at the National Rehabilitation Center. He has also served as an adjunct professor at the University of Pittsburgh and Yonsei University. Additionally, he serves as the President of the Korea Wheelchair Rugby Association and CEO of MLP Inc., making significant contributions to the fields of rehabilitation engineering and adaptive sports for individuals with disabilities.</p>
                 </div>
             </div>
         </div>
@@ -219,10 +219,9 @@
             <p style="margin-top: 6px; font-size: 0.95rem;">Additional keynote and special speakers will be announced sequentially as they are confirmed.</p>
         </div>
     </main>
-    
-    <footer>
-        <p>&copy; 2026 Korea Cooperative of Care Robots (KCCR). All rights reserved.</p>
-    </footer>
+    <footer><p>&copy; 2026 Korea Cooperative of Care Robots (KCCR). All rights reserved.</p></footer>
 </div>
+<script src="menu_kr.js"></script>
 </body>
 </html>
+```[cite: 4]

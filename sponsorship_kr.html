@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전시·후원 - Care Robot 2026</title>
+    <title>Exhibition · Sponsorship - Care Robot 2026</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.6; display: flex; min-height: 100vh; }
@@ -45,64 +45,121 @@
         .qr-code-img { width: 180px; height: 180px; margin: 15px 0; border: 1px solid #cbd5e1; border-radius: 8px; padding: 8px; background: #ffffff; }
         .form-link-btn { display: inline-block; background-color: #0d9488; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; margin-top: 10px; transition: background-color 0.2s; }
         .form-link-btn:hover { background-color: #0f766e; }
-        .sponsors-grid { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
-        .sponsor-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; display: inline-flex; align-items: center; gap: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); width: 100%; }
+        .sponsors-grid { display: flex; flex-direction: column; gap: 20px; margin-top: 15px; }
+        .sponsor-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); width: 100%; }
+        .sponsor-header { display: flex; align-items: center; gap: 20px; }
+        .sponsor-desc { font-size: 0.95rem; color: #475569; line-height: 1.6; border-top: 1px solid #f1f5f9; padding-top: 12px; margin-top: 4px; }
         footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94a3b8; font-size: 0.88rem; margin-top: auto; }
         @media (max-width: 768px) { .sidebar { position: relative; width: 100%; height: auto; } .main-wrapper { margin-left: 0; } body { flex-direction: column; } }
     </style>
 </head>
 <body>
-<div id="sidebar-container"></div>
+
+<!-- 좌측 네비게이션 사이드바 (직접 포함) -->
+<nav class="sidebar">
+    <a href="index.html" class="sidebar-brand">Care Robot 2026</a>
+    <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="announcements.html" class="bold-item">Announcements</a></li>
+        <li class="menu-dropdown">
+            <div class="menu-dropdown-title"><span class="arrow">∨</span> Program</div>
+            <ul class="submenu">
+                <li><a href="schedule.html">Schedule at a Glance</a></li>
+                <li><a href="presentations.html">Presentations</a></li>
+                <li><a href="keynotes.html">Keynote Speakers</a></li>
+                <li><a href="exhibition.html">Exhibition</a></li>
+                <li><a href="tures.html">Industrial Tours & B2B</a></li>
+            </ul>
+        </li>
+        <li class="menu-dropdown">
+            <div class="menu-dropdown-title"><span class="arrow">∨</span> Call for Contributions</div>
+            <ul class="submenu">
+                <li><a href="call-for-papers.html">Call for Papers</a></li>
+                <li><a href="submission-guidelines.html">Submission Guidelines</a></li>
+            </ul>
+        </li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="organizing-committee.html">Organizing Committee</a></li>
+        <li><a href="sponsorship.html" class="active">Sponsorship & Exhibition</a></li>
+        <li><a href="about.html">About KCCR</a></li>
+        <li><a href="care-robot-2025.html">Care Robot 2025 Archive</a></li>
+    </ul>
+</nav>
+
 <div class="main-wrapper">
-    <div class="top-lang-bar"><div class="lang-switch"><span class="globe-icon">🌐</span><a href="sponsorship_kr.html" class="active"><span style="font-size:1.15rem;">🇰🇷</span> KOR</a><span class="divider">|</span><a href="sponsorship.html"><span style="font-size:1.15rem;">🇺🇸</span> ENG</a></div></div>
+    <div class="top-lang-bar"><div class="lang-switch"><span class="globe-icon">🌐</span><a href="sponsorship_kr.html"><span style="font-size:1.15rem;">🇰🇷</span> KOR</a><span class="divider">|</span><a href="sponsorship.html" class="active"><span style="font-size:1.15rem;">🇺🇸</span> ENG</a></div></div>
     <header>
         <div class="header-container">
-            <div class="badge">전시·후원</div>
+            <div class="badge">Exhibition · Sponsorship</div>
             <h1 class="conf-title">Care Robot 2026</h1>
-            <div class="conf-subtitle">전시·후원 안내</div>
-            <div class="conf-meta"><span>📅 2026.11.26</span></div>
+            <div class="conf-subtitle">Exhibition · Sponsorship Opportunities</div>
+            <div class="conf-meta"><span>📅 November 26, 2026</span></div>
         </div>
     </header>
     <main>
         <div class="card">
-            <h2>전시·후원 부스 안내</h2>
-            <div class="deadline-badge">🚨 사전 등록비 이체 & 전시·후원 등록 마감: 2026년 10월 31일</div>
+            <h2>Exhibition · Sponsorship Booth Guide</h2>
+            <div class="deadline-badge">🚨 Pre-Registration Fee & Exhibition · Sponsorship Deadline: October 31, 2026</div>
             
             <div class="qr-section">
-                <h3>전시·후원 신청 안내</h3>
-                <p>전시·후원을 원하시는 회사 또는 개인은 아래 QR 코드를 스캔하여 신청서를 작성해 주세요.</p>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://docs.google.com/forms/d/1a71BI4e48NlDNNNPm8WACaYSpPYG9bSOO14thvycuVs/edit" alt="스폰서십 신청 QR 코드" class="qr-code-img">
-                <a href="https://docs.google.com/forms/d/1a71BI4e48NlDNNNPm8WACaYSpPYG9bSOO14thvycuVs/edit" target="_blank" class="form-link-btn">신청서 직접 이동하기</a>
+                <h3>Application for Exhibition · Sponsorship</h3>
+                <p>Organizations and corporations interested in exhibition and sponsorship, please scan the QR code or click below to submit the form.</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://docs.google.com/forms/d/1a71BI4e48NlDNNNPm8WACaYSpPYG9bSOO14thvycuVs/edit" alt="Sponsorship Application QR Code" class="qr-code-img">
+                <a href="https://docs.google.com/forms/d/1a71BI4e48NlDNNNPm8WACaYSpPYG9bSOO14thvycuVs/edit" target="_blank" class="form-link-btn">Go Directly to Application Form</a>
             </div>
 
-            <h3 style="color:#1e3a8a; margin: 30px 0 15px;">전시·후원 참여 기업</h3>
+            <h3 style="color:#1e3a8a; margin: 30px 0 15px;">Featured Exhibitors & Sponsors</h3>
             <div class="sponsors-grid">
-                <!-- NT Robot (엔티로봇) -->
+                <!-- Able AI -->
                 <div class="sponsor-item">
-                    <a href="http://www.ntrobot.net" target="_blank" rel="noopener noreferrer">
-                        <img src="photos/ntrobot.png" alt="(주)엔티로봇 로고" style="max-height: 50px; width: auto;" onerror="this.style.display='none'">
-                    </a>
-                    <div>
-                        <a href="http://www.ntrobot.net" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; font-weight: 700; color: #0f172a; text-decoration: none;">(주)엔티로봇 (NT Robot, Co.)</a>
-                        <div style="font-size: 0.9rem; color: #64748b;">공식 홈페이지: <a href="http://www.ntrobot.net" target="_blank" rel="noopener noreferrer" style="color: #0d9488;">www.ntrobot.net</a></div>
+                    <div class="sponsor-header">
+                        <a href="https://www.able-ai.ai/main/main.html" target="_blank" rel="noopener noreferrer">
+                            <img src="photos/ableai.jpg" alt="Able AI Logo" style="max-height: 50px; width: auto;" onerror="this.style.display='none'">
+                        </a>
+                        <div>
+                            <a href="https://www.able-ai.ai/main/main.html" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; font-weight: 700; color: #0f172a; text-decoration: none;">Able AI</a>
+                            <div style="font-size: 0.9rem; color: #64748b;">Official Website: <a href="https://www.able-ai.ai/main/main.html" target="_blank" rel="noopener noreferrer" style="color: #0d9488;">www.able-ai.ai</a></div>
+                        </div>
+                    </div>
+                    <div class="sponsor-desc">
+                        Able AI develops intelligent solutions based on on-device and on-premise AI. The company applies lightweight language models, voice and vision recognition, and emotion/concentration analysis technologies to home appliances, healthcare, and robotics, while expanding natural human-AI interaction into the care sector.
                     </div>
                 </div>
 
-                <!-- Able AI (에이블에이아이) -->
+                <!-- NT Robot -->
                 <div class="sponsor-item">
-                    <a href="https://www.able-ai.ai/main/main.html" target="_blank" rel="noopener noreferrer">
-                        <img src="photos/ableai.jpg" alt="Able AI 로고" style="max-height: 50px; width: auto;" onerror="this.style.display='none'">
-                    </a>
-                    <div>
-                        <a href="https://www.able-ai.ai/main/main.html" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; font-weight: 700; color: #0f172a; text-decoration: none;">에이블에이아이 (Able AI)</a>
-                        <div style="font-size: 0.9rem; color: #64748b;">공식 홈페이지: <a href="https://www.able-ai.ai/main/main.html" target="_blank" rel="noopener noreferrer" style="color: #0d9488;">www.able-ai.ai</a></div>
+                    <div class="sponsor-header">
+                        <a href="http://www.ntrobot.net" target="_blank" rel="noopener noreferrer">
+                            <img src="photos/ntrobot.png" alt="NT Robot Co., Ltd. Logo" style="max-height: 50px; width: auto;" onerror="this.style.display='none'">
+                        </a>
+                        <div>
+                            <a href="http://www.ntrobot.net" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; font-weight: 700; color: #0f172a; text-decoration: none;">NT Robot Co., Ltd.</a>
+                            <div style="font-size: 0.9rem; color: #64748b;">Official Website: <a href="http://www.ntrobot.net" target="_blank" rel="noopener noreferrer" style="color: #0d9488;">www.ntrobot.net</a></div>
+                        </div>
+                    </div>
+                    <div class="sponsor-desc">
+                        Founded in 2004 under the banner of Human-Robot Symbiosis, NT Robot started with SI business for industrial robots and has since expanded into medical, rehabilitation, and care robotics. Notably, the company is achieving tangible development results in feeding care robots, wearable gait-assist robots, hospital logistics transport robots, and electric mobility devices, working actively towards their commercialization.
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer><p>&copy; 2026 한국돌봄로봇협동조합 (Korea Cooperative of Care Robots, KCCR). All rights reserved.</p></footer>
+    <footer><p>&copy; 2026 Korea Cooperative of Care Robots (KCCR). All rights reserved.</p></footer>
 </div>
-<script src="menu_kr.js"></script>
+
+<script>
+    document.querySelectorAll('.menu-dropdown').forEach(item => {
+        const title = item.querySelector('.menu-dropdown-title');
+        if (title) {
+            title.addEventListener('click', () => {
+                item.classList.toggle('open');
+                const arrow = item.querySelector('.arrow');
+                if (arrow) {
+                    arrow.textContent = item.classList.contains('open') ? '∧' : '∨';
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>

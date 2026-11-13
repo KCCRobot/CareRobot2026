@@ -4,56 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule - Care Robot 2026</title>
-    <style>* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.6; display: flex; min-height: 100vh; }
-.sidebar { width: 260px; background-color: #1a1a1a; color: #ffffff; position: fixed; top: 0; left: 0; bottom: 0; padding: 35px 22px; overflow-y: auto; z-index: 100; }
-.sidebar-brand { font-size: 1.45rem; font-weight: 700; color: #ffffff; text-decoration: none; display: block; margin-bottom: 28px; letter-spacing: -0.01em; }
-.sidebar-menu { list-style: none; }
-.sidebar-menu li { margin-bottom: 14px; }
-.sidebar-menu a { color: #d1d5db; text-decoration: none; font-size: 1.02rem; display: block; font-weight: 400; transition: color 0.15s ease; }
-.sidebar-menu a:hover, .sidebar-menu a.active { color: #93c5fd; font-weight: 600; }
-.sidebar-menu .bold-item { font-weight: 700; }
-.menu-dropdown { cursor: pointer; }
-.menu-dropdown-title { display: flex; align-items: center; gap: 8px; font-size: 1.02rem; color: #ffffff; user-select: none; }
-.menu-dropdown-title .arrow { font-size: 0.75rem; transition: transform 0.2s; }
-.submenu { display: none; list-style: none; padding-left: 18px; margin-top: 8px; }
-.menu-dropdown.open .submenu { display: block; }
-.submenu li { margin-bottom: 8px; }
-.submenu a { font-size: 0.92rem; color: #9ca3af; }
-.submenu a:hover, .submenu a.active { color: #ffffff; }
-.main-wrapper { margin-left: 260px; flex: 1; display: flex; flex-direction: column; min-width: 0; }
-.top-lang-bar { display: flex; justify-content: flex-end; align-items: center; padding: 12px 30px; background-color: #0f172a; border-bottom: 1px solid #1e293b; }
-.lang-switch { display: inline-flex; align-items: center; gap: 12px; font-size: 1.05rem; font-weight: 700; }
-.lang-switch .globe-icon { font-size: 1.25rem; margin-right: 2px; }
-.lang-switch a { text-decoration: none; color: #94a3b8; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 6px; transition: all 0.2s ease; }
-.lang-switch a:hover { color: #ffffff; background: rgba(255, 255, 255, 0.08); }
-.lang-switch a.active { color: #0d9488; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
-.lang-switch .divider { color: #475569; font-weight: 300; }
-header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: white; padding: 50px 25px 40px; text-align: center; border-bottom: 4px solid #0d9488; }
-.header-container { max-width: 900px; margin: 0 auto; }
-.badge { display: inline-block; background-color: rgba(13, 148, 136, 0.3); border: 1px solid #0d9488; color: #5eead4; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; }
-h1.conf-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; color: #ffffff; }
-.conf-subtitle { font-size: 1.2rem; color: #93c5fd; margin-bottom: 18px; }
-.conf-meta { display: inline-flex; gap: 20px; flex-wrap: wrap; font-size: 1.02rem; color: #e2e8f0; background: rgba(255, 255, 255, 0.08); padding: 10px 22px; border-radius: 8px; }
-main { max-width: 960px; margin: 35px auto; padding: 0 25px; width: 100%; }
-.card { background: white; border-radius: 10px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
-.card h2 { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 15px; border-left: 4px solid #0d9488; padding-left: 10px; }
-.card p { font-size: 1.02rem; line-height: 1.75; margin-bottom: 14px; }
-.dates-table, .fee-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-.dates-table th, .dates-table td, .fee-table th, .fee-table td { padding: 12px 14px; text-align: left; border: 1px solid #e2e8f0; }
-.dates-table th, .fee-table th { background-color: #f1f5f9; font-weight: 600; color: #0f172a; }
-.fee-table td:last-child { font-weight: 600; color: #1e3a8a; }
-.prep-box { background: #fefce8; border: 1px solid #fef08a; border-radius: 8px; padding: 25px; text-align: center; color: #854d0e; font-size: 1.05rem; font-weight: 500; margin: 20px 0; }
-.contact-box { background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 8px; padding: 18px; text-align: center; margin-top: 20px; }
-.contact-box a { color: #1e3a8a; font-weight: bold; text-decoration: none; }
-.topics-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
-.topic-card { flex: 1; min-width: 290px; background: #f1f5f9; border-radius: 8px; padding: 20px; border-top: 3px solid #3b82f6; }
-.topic-card h3 { font-size: 1.15rem; color: #0f172a; margin-bottom: 12px; }
-.topic-card ul { list-style-type: none; }
-.topic-card li { position: relative; padding-left: 16px; margin-bottom: 8px; font-size: 0.92rem; color: #475569; }
-.topic-card li::before { content: "•"; position: absolute; left: 0; color: #0d9488; font-weight: bold; }
-footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94a3b8; font-size: 0.88rem; margin-top: auto; }
-@media (max-width: 768px) { .sidebar { position: relative; width: 100%; height: auto; } .main-wrapper { margin-left: 0; } body { flex-direction: column; } }</style>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.6; display: flex; min-height: 100vh; }
+        .sidebar { width: 260px; background-color: #1a1a1a; color: #ffffff; position: fixed; top: 0; left: 0; bottom: 0; padding: 35px 22px; overflow-y: auto; z-index: 100; }
+        .sidebar-brand { font-size: 1.45rem; font-weight: 700; color: #ffffff; text-decoration: none; display: block; margin-bottom: 28px; letter-spacing: -0.01em; }
+        .sidebar-menu { list-style: none; }
+        .sidebar-menu li { margin-bottom: 14px; }
+        .sidebar-menu a { color: #d1d5db; text-decoration: none; font-size: 1.02rem; display: block; font-weight: 400; transition: color 0.15s ease; }
+        .sidebar-menu a:hover, .sidebar-menu a.active { color: #93c5fd; font-weight: 600; }
+        .sidebar-menu .bold-item { font-weight: 700; }
+        .menu-dropdown { cursor: pointer; }
+        .menu-dropdown-title { display: flex; align-items: center; gap: 8px; font-size: 1.02rem; color: #ffffff; user-select: none; }
+        .menu-dropdown-title .arrow { font-size: 0.75rem; transition: transform 0.2s; }
+        .submenu { display: none; list-style: none; padding-left: 18px; margin-top: 8px; }
+        .menu-dropdown.open .submenu { display: block; }
+        .submenu li { margin-bottom: 8px; }
+        .submenu a { font-size: 0.92rem; color: #9ca3af; }
+        .submenu a:hover, .submenu a.active { color: #ffffff; }
+        .main-wrapper { margin-left: 260px; flex: 1; display: flex; flex-direction: column; min-width: 0; }
+        .top-lang-bar { display: flex; justify-content: flex-end; align-items: center; padding: 12px 30px; background-color: #0f172a; border-bottom: 1px solid #1e293b; }
+        .lang-switch { display: inline-flex; align-items: center; gap: 12px; font-size: 1.05rem; font-weight: 700; }
+        .lang-switch .globe-icon { font-size: 1.25rem; margin-right: 2px; }
+        .lang-switch a { text-decoration: none; color: #94a3b8; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 6px; transition: all 0.2s ease; }
+        .lang-switch a:hover { color: #ffffff; background: rgba(255, 255, 255, 0.08); }
+        .lang-switch a.active { color: #0d9488; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+        .lang-switch .divider { color: #475569; font-weight: 300; }
+        header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: white; padding: 50px 25px 40px; text-align: center; border-bottom: 4px solid #0d9488; }
+        .header-container { max-width: 960px; margin: 0 auto; }
+        .badge { display: inline-block; background-color: rgba(13, 148, 136, 0.3); border: 1px solid #0d9488; color: #5eead4; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; }
+        h1.conf-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; color: #ffffff; }
+        .conf-subtitle { font-size: 1.2rem; color: #93c5fd; margin-bottom: 18px; }
+        .conf-meta { display: inline-flex; gap: 20px; flex-wrap: wrap; justify-content: center; font-size: 1.02rem; color: #e2e8f0; background: rgba(255, 255, 255, 0.08); padding: 10px 22px; border-radius: 8px; }
+        main { max-width: 1120px; margin: 35px auto; padding: 0 25px; width: 100%; }
+        .card { background: white; border-radius: 10px; padding: 30px; margin-bottom: 28px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
+        .card h2 { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 15px; border-left: 4px solid #0d9488; padding-left: 10px; }
+        .card p { font-size: 1.02rem; line-height: 1.75; margin-bottom: 14px; }
+        .quick-nav { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
+        .quick-nav a { display: inline-block; padding: 8px 16px; background-color: #eff6ff; color: #1e3a8a; border: 1px solid #bfdbfe; border-radius: 6px; font-size: 0.94rem; font-weight: 600; text-decoration: none; transition: all 0.15s ease; }
+        .quick-nav a:hover { background-color: #1e3a8a; color: #ffffff; border-color: #1e3a8a; }
+        .dates-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .dates-table th, .dates-table td { padding: 12px 14px; text-align: left; border: 1px solid #e2e8f0; }
+        .dates-table th { background-color: #f1f5f9; font-weight: 700; color: #0f172a; }
+        .dates-table tbody tr:hover { background-color: #f8fafc; }
+        .dates-table tr.invited-group-header td { background-color: #eff6ff; color: #1e3a8a; font-weight: 700; }
+        .dates-table tr.invited-sub-row td:first-child { padding-left: 24px; color: #334155; font-variant-numeric: tabular-nums; }
+        .invited-tag { display: inline-block; background-color: #e0f2fe; color: #0369a1; font-size: 0.78rem; font-weight: 700; padding: 1px 7px; border-radius: 4px; margin-right: 6px; vertical-align: middle; }
+        .invited-title { display: block; margin-top: 4px; color: #0f172a; font-weight: 500; font-size: 0.94rem; }
+        .table-responsive { width: 100%; overflow-x: auto; }
+        .milestone-bar { background-color: #f1f5f9; border-left: 4px solid #64748b; padding: 11px 16px; border-radius: 6px; margin: 18px 0; font-weight: 700; color: #1e293b; font-size: 0.98rem; }
+        .session-block { margin: 24px 0 28px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; }
+        .session-header { background: linear-gradient(90deg, #1e3a8a 0%, #1d4ed8 100%); color: #ffffff; padding: 12px 16px; font-weight: 700; font-size: 1.02rem; }
+        .detail-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+        .detail-table th, .detail-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; vertical-align: top; }
+        .detail-table th:last-child, .detail-table td:last-child { border-right: none; }
+        .detail-table th { background-color: #f8fafc; font-weight: 700; color: #0f172a; white-space: nowrap; }
+        .detail-table tbody tr:hover { background-color: #f8fafc; }
+        .detail-table tr.non-presenting { background-color: #fafafa; color: #64748b; }
+        .col-no { width: 62px; text-align: center !important; font-weight: 700; color: #1e3a8a; white-space: nowrap; }
+        .col-time { width: 105px; white-space: nowrap; font-variant-numeric: tabular-nums; color: #334155; }
+        .col-session { width: 145px; white-space: nowrap; font-weight: 500; }
+        .col-authors { width: 185px; }
+        .col-affil { width: 175px; }
+        .col-title { min-width: 260px; }
+        .presenter { color: #0070c0; font-weight: 600; }
+        .legend-blue { color: #0070c0; font-weight: 600; font-size: 0.84rem; }
+        .section-note { font-size: 0.92rem; color: #475569; background-color: #f8fafc; padding: 10px 14px; border-radius: 6px; border: 1px solid #e2e8f0; margin-bottom: 16px; }
+        footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94a3b8; font-size: 0.88rem; margin-top: auto; }
+        @media (max-width: 768px) { .sidebar { position: relative; width: 100%; height: auto; } .main-wrapper { margin-left: 0; } body { flex-direction: column; } }
+    </style>
 </head>
 <body>
 <div id="sidebar-container"></div>
@@ -61,75 +80,668 @@ footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94
     <div class="top-lang-bar"><div class="lang-switch"><span class="globe-icon">🌐</span><a href="schedule_kr.html"><span style="font-size:1.15rem;">🇰🇷</span> KOR</a><span class="divider">|</span><a href="schedule.html" class="active"><span style="font-size:1.15rem;">🇺🇸</span> ENG</a></div></div>
     <header>
         <div class="header-container">
-            <div class="badge">Program</div>
+            <div class="badge">PROGRAM</div>
             <h1 class="conf-title">Care Robot 2026</h1>
-            <div class="conf-subtitle">Conference Schedule</div>
-            <div class="conf-meta"><span>📅 November 26, 2026</span></div>
+            <div class="conf-subtitle">Overall Schedule & Detailed Program</div>
+            <div class="conf-meta">
+                <span>📅 Thursday, November 26, 2026 | 09:00 ~ 18:00</span>
+                <span>📍 B1 Floor, Yonsei Severance Building (10 Tongil-ro, Jung-gu, Seoul)</span>
+            </div>
         </div>
     </header>
     <main>
-        <div class="card">
+        <div class="quick-nav">
+            <a href="#overall-schedule">📋 Schedule at a Glance</a>
+            <a href="#detailed-schedule">📑 Detailed Session Schedule</a>
+            <a href="#poster-session">🖼️ Poster Session (P1 Session)</a>
+        </div>
+
+        <div class="card" id="overall-schedule">
             <h2>Overall Schedule</h2>
-            <table class="dates-table">
-                <thead>
+            <p style="font-size: 0.96rem; color: #475569; margin-bottom: 12px;">
+                <strong>Date & Venue:</strong> Thursday, November 26, 2026, 09:00 ~ 18:00, B1 Floor, Yonsei Severance Building (10 Tongil-ro, Jung-gu, Seoul, Korea)
+            </p>
+            <div class="table-responsive">
+                <table class="dates-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 225px;">Time</th>
+                            <th>Program</th>
+                            <th style="width: 195px; text-align: center;">Venue / Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                     <tr>
-                        <th>Time</th>
-                        <th>Program</th>
-                        <th>Location / Remarks</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>09:30 ~ 10:00</td>
-                        <td>On-site Registration (Badge and Proceedings Collection)</td>
-                        <td>Main Conference Lounge</td>
-                    </tr>
-                    <tr>
-                        <td>10:00 ~ 11:00</td>
-                        <td>Oral Presentation 1</td>
-                        <td rowspan="2" style="vertical-align: middle;">Main Conference Room</td>
-                    </tr>
-                    <tr>
-                        <td>11:00 ~ 12:00</td>
-                        <td>Invited Talk 1 (Speakers: Dr. Wonkyung Song, Dr. Hyesook Cho)</td>
+                        <td>09:00 ~ 09:20 (20 min)</td>
+                        <td>On-site Registration (Badge, Proceedings, Souvenir & Meal Ticket Pick-up, Poster Mounting, Booth Setup)</td>
+                        <td style="text-align: center;">Lounge in front of Main Conference Room</td>
                     </tr>
                     <tr>
-                        <td>12:00 ~ 13:00</td>
-                        <td>Lunch</td>
-                        <td>Basement Restaurant (using meal ticket)</td>
+                        <td>09:05 ~ 10:50 (105 min)</td>
+                        <td>Oral Session (T1 Session) – Physical Care (7 Presentations)</td>
+                        <td style="text-align: center;">Main Conference Room</td>
                     </tr>
                     <tr>
-                        <td>13:00 ~ 14:00</td>
-                        <td>Oral Presentation 2</td>
-                        <td rowspan="4" style="vertical-align: middle;">Main Conference Room</td>
+                        <td>10:50 ~ 10:55 (5 min)</td>
+                        <td>Welcome Remarks (Chairman, Korea Cooperative of Care Robots)</td>
+                        <td style="text-align: center;">Main Conference Room</td>
                     </tr>
                     <tr>
-                        <td>14:00 ~ 15:00</td>
-                        <td>Invited Talk 2 (Speakers: Dr. Jongbae Kim, Mr. Bob Chiang)</td>
+                        <td>10:55 ~ 11:00 (5 min)</td>
+                        <td>Group Photo (All Participants)</td>
+                        <td style="text-align: center;">Main Conference Room</td>
+                    </tr>
+                    <tr class="invited-group-header">
+                        <td>11:00 ~ 12:00 (60 min)</td>
+                        <td>Invited Talks 1 (V1 Session)</td>
+                        <td rowspan="4" style="vertical-align: middle; text-align: center;">Main Conference Room</td>
+                    </tr>
+                    <tr class="invited-sub-row">
+                        <td>└ 11:00 ~ 11:30 (30 min)</td>
+                        <td>
+                            <span class="invited-tag">Keynote Address</span><strong>Dr. Wonkyung Song</strong> (National Rehabilitation Center)
+                            <span class="invited-title">Recent Trends and Future Directions of Care Robots in Korea</span>
+                        </td>
+                    </tr>
+                    <tr class="invited-sub-row">
+                        <td>└ 11:30 ~ 11:50 (20 min)</td>
+                        <td>
+                            <span class="invited-tag">Industry Talk</span><strong>Mr. Masahiro Satono</strong> (WACOH-TECH, Inc.)
+                            <span class="invited-title">Robots That ‘Sense’ Force Are Transforming Elderly Care: Applications of Force Sensing Pioneered by DynPick</span>
+                        </td>
+                    </tr>
+                    <tr class="invited-sub-row">
+                        <td>└ 11:50 ~ 12:00 (10 min)</td>
+                        <td>
+                            <span class="invited-tag">Special Field Dialogue</span><strong>Director Hyesook Cho</strong> (Nursing Home Green Hill; Moderator: Chairman Kay Kim)
+                            <span class="invited-title">User-Centric Care Robots, Seeking Answers in the Field</span>
+                        </td>
                     </tr>
                     <tr>
-                        <td>15:00 ~ 16:00</td>
-                        <td>Oral Presentation 3</td>
+                        <td>12:00 ~ 13:00 (60 min)</td>
+                        <td>Lunch & Poster Viewing (Leave comment/question notes at the bottom of posters for authors)</td>
+                        <td style="text-align: center;">B1 Food Court / Restaurants</td>
                     </tr>
                     <tr>
-                        <td>16:00 ~ 17:00</td>
-                        <td>Invited Talk 3 (Presenter: Mr. Masahiro Satono)</td>
+                        <td>13:00 ~ 15:00 (120 min)</td>
+                        <td>Oral Session (T2 Session) – Emotional & Cognitive Care and AI (8 Presentations)</td>
+                        <td rowspan="8" style="vertical-align: middle; text-align: center;">Main Conference Room</td>
+                    </tr>
+                    <tr class="invited-group-header">
+                        <td>15:00 ~ 16:00 (60 min)</td>
+                        <td>Invited Talks 2 (V2 Session)</td>
+                    </tr>
+                    <tr class="invited-sub-row">
+                        <td>└ 15:00 ~ 15:30 (30 min)</td>
+                        <td>
+                            <span class="invited-tag">Special Lecture</span><strong>Prof. Jongbae Kim</strong> (Yonsei University)
+                            <span class="invited-title">Transforming the Power Wheelchair into a Robot</span>
+                        </td>
+                    </tr>
+                    <tr class="invited-sub-row">
+                        <td>└ 15:30 ~ 16:00 (30 min)</td>
+                        <td>
+                            <span class="invited-tag">Industry Talk</span><strong>Mr. Bob Chiang</strong> (FREE Bionics)
+                            <span class="invited-title">Rewiring the Walk: AI-Powered Exoskeletons in Modern Rehab</span>
+                        </td>
                     </tr>
                     <tr>
-                        <td>17:00 ~ 18:00</td>
-                        <td>Oral Presentation 4</td>
-                        <td rowspan="2" style="vertical-align: middle;">Main Conference Room</td>
+                        <td>16:00 ~ 16:30 (30 min)</td>
+                        <td>Poster Session (P1 Session – Interactive Q&A with Authors via Posted Notes)</td>
                     </tr>
                     <tr>
-                        <td>18:00</td>
-                        <td>Award Ceremony & Closing</td>
+                        <td>16:30 ~ 17:45 (75 min)</td>
+                        <td>Oral Session (T3 Session) – Care Robots and Ethics (5 Presentations)</td>
                     </tr>
-                </tbody>
-            </table>
-            <p style="font-size: 0.9rem; color: #64748b; margin-top: 10px;">* The above schedule is subject to change in the final program.</p>
+                    <tr>
+                        <td>17:45 ~ 17:55 (10 min)</td>
+                        <td>Awards Ceremony (Best Paper, Best Poster, Idea Contest)</td>
+                    </tr>
+                    <tr>
+                        <td>17:55 ~ 18:00 (5 min)</td>
+                        <td>Closing Remarks</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size: 0.9rem; color: #64748b; margin-top: 10px;">* The schedule above is subject to minor changes depending on event operations.</p>
+        </div>
+
+        <div class="card" id="detailed-schedule">
+            <h2>Detailed Schedule</h2>
+            <div class="section-note">
+                💡 Names highlighted in <span class="presenter">blue</span> indicate the on-site presenting author.
+            </div>
+            <div class="milestone-bar">
+                <span>09:00~10:00 Registration (Lounge in front of Main Conference Room)</span>
+            </div>
+            <div class="session-block">
+                <div class="session-header">09:05~10:50 Physical Care Session (T1 Session) | Chair: Prof. Emeritus Sung-Soo Kim (Chungnam National University)</div>
+                <div class="table-responsive">
+                    <table class="detail-table">
+                        <thead>
+                            <tr>
+                                <th class="col-no">No.</th>
+                                <th class="col-time">Time</th>
+                                <th class="col-session">Session</th>
+                                <th class="col-authors">Authors <span class="legend-blue">(Presenter in Blue)</span></th>
+                                <th class="col-affil">Affiliation</th>
+                                <th class="col-title">Paper / Presentation Title</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="col-no">T1-1</td>
+                            <td class="col-time">09:05~09:20</td>
+                            <td class="col-session">Physical Care</td>
+                            <td class="col-authors"><span class="presenter">Seung-Eop Lim</span></td>
+                            <td class="col-affil">CURACO Inc.</td>
+                            <td class="col-title">Clinical Field Application Results and Overseas Expansion of Curaco Carebidet (Excretion Care Robot)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T1-2</td>
+                            <td class="col-time">09:20~09:35</td>
+                            <td class="col-session">Physical Care</td>
+                            <td class="col-authors"><span class="presenter">Hyeong-Bok Lee</span></td>
+                            <td class="col-affil">Seoul National University Hospital</td>
+                            <td class="col-title">Utilization of Nursing Robots in Clinical Healthcare Settings</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T1-3</td>
+                            <td class="col-time">09:35~09:50</td>
+                            <td class="col-session">Physical Care</td>
+                            <td class="col-authors"><span class="presenter">Yekwang Kim</span>, Seung-Jong Kim</td>
+                            <td class="col-affil">Korea University</td>
+                            <td class="col-title">A Practical Single Shoe-Mounted IMU System for Daily Life: Gait Progression and Gait Parameter Estimation</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T1-4</td>
+                            <td class="col-time">09:50~10:05</td>
+                            <td class="col-session">Physical Care</td>
+                            <td class="col-authors"><span class="presenter">Woo-Jung Shim</span></td>
+                            <td class="col-affil">Chongshin University</td>
+                            <td class="col-title">Interactive Social Path Navigation for Human-Centered Autonomous Powered Wheelchairs: Virtual Simulation Comparison of Social Utterances and LLM Reasoning</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T1-5</td>
+                            <td class="col-time">10:05~10:20</td>
+                            <td class="col-session">Physical Care</td>
+                            <td class="col-authors"><span class="presenter">Gwan-Soon Seo</span>, Yong Soon Shin</td>
+                            <td class="col-affil">Graduate School of Hanyang University, Hanyang University</td>
+                            <td class="col-title">Behavioral Changes in Older Adults with Dementia Before and After Using a Bathing Care Robot: An Exploratory Study Using CAREBA</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T1-6</td>
+                            <td class="col-time">10:20~10:35</td>
+                            <td class="col-session">Physical Care</td>
+                            <td class="col-authors"><span class="presenter">Ho-Jin Jang</span>, Jae-Yong Lee, Jae-Hyo Kim</td>
+                            <td class="col-affil">Handong Global University</td>
+                            <td class="col-title">Comparison of Master-Slave Pneumatic Glove Mirror Therapy and Auto-Mode Rehabilitation for Hand Rehabilitation in Hemiplegic Patients</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T1-7</td>
+                            <td class="col-time">10:35~10:50</td>
+                            <td class="col-session">Physical Care</td>
+                            <td class="col-authors"><span class="presenter">Jeong-Hwa Lee</span>, Su-Bin Park</td>
+                            <td class="col-affil">Hangeul Dance Research Institute, Hanyang University</td>
+                            <td class="col-title">Exploring the Applicability of Humanoid Robots for Upper-Limb Cognitive-Motor Care in Older Adults Using Tutting-Based Hangeul Dance Education (HDE)</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="milestone-bar">
+                <span>10:50~10:55 Welcome Remarks (Chairman, Korea Cooperative of Care Robots)</span>
+            </div>
+            <div class="milestone-bar">
+                <span>10:55~11:00 Group Photo (All Participants)</span>
+            </div>
+            <div class="session-block">
+                <div class="session-header">11:00~12:00 Invited Talks Session (V1 Session) | Chair: Prof. Emeritus Sung-Soo Kim (Chungnam National University)</div>
+                <div class="table-responsive">
+                    <table class="detail-table">
+                        <thead>
+                            <tr>
+                                <th class="col-no">No.</th>
+                                <th class="col-time">Time</th>
+                                <th class="col-session">Session</th>
+                                <th class="col-authors">Speakers <span class="legend-blue">(Presenter in Blue)</span></th>
+                                <th class="col-affil">Affiliation</th>
+                                <th class="col-title">Presentation Title</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="col-no">V1-1</td>
+                            <td class="col-time">11:00~11:30</td>
+                            <td class="col-session">Keynote Address</td>
+                            <td class="col-authors"><span class="presenter">Dr. Wonkyung Song</span></td>
+                            <td class="col-affil">National Rehabilitation Center (NRC)</td>
+                            <td class="col-title">Recent Trends and Future Directions of Care Robots in Korea</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">V1-2</td>
+                            <td class="col-time">11:30~11:50</td>
+                            <td class="col-session">Industry Talk</td>
+                            <td class="col-authors"><span class="presenter">Mr. Masahiro Satono</span></td>
+                            <td class="col-affil">WACOH-TECH, Inc.</td>
+                            <td class="col-title">Robots That ‘Sense’ Force Are Transforming Elderly Care: Applications of Force Sensing Pioneered by DynPick</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">V1-3</td>
+                            <td class="col-time">11:50~12:00</td>
+                            <td class="col-session">Special Field Dialogue</td>
+                            <td class="col-authors"><span class="presenter">Director Hyesook Cho</span></td>
+                            <td class="col-affil">Nursing Home Green Hill</td>
+                            <td class="col-title">User-Centric Care Robots, Seeking Answers in the Field</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="milestone-bar">
+                <span>12:00~13:00 Lunch (B1 Food Court / Restaurants with Meal Tickets)</span>
+            </div>
+            <div class="session-block">
+                <div class="session-header">13:00~15:00 Emotional & Cognitive Care and AI Session (T2 Session) | Chair: Prof. Jeong-Whan Lee (Konkuk University Glocal Campus)</div>
+                <div class="table-responsive">
+                    <table class="detail-table">
+                        <thead>
+                            <tr>
+                                <th class="col-no">No.</th>
+                                <th class="col-time">Time</th>
+                                <th class="col-session">Session</th>
+                                <th class="col-authors">Authors <span class="legend-blue">(Presenter in Blue)</span></th>
+                                <th class="col-affil">Affiliation</th>
+                                <th class="col-title">Paper / Presentation Title</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="col-no">T2-1</td>
+                            <td class="col-time">13:00~13:15</td>
+                            <td class="col-session">Cognitive Care & AI</td>
+                            <td class="col-authors"><span class="presenter">Chang-Soo Lee</span></td>
+                            <td class="col-affil">Kangwon National University</td>
+                            <td class="col-title">Global Technical Barriers to Trade (TBT) Trends and Standardization/Certification Response Framework for Physical AI-Based Care Robots</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T2-2</td>
+                            <td class="col-time">13:15~13:30</td>
+                            <td class="col-session">Cognitive Care & AI</td>
+                            <td class="col-authors"><span class="presenter">You-Me Han</span></td>
+                            <td class="col-affil">Hoseo Univ.</td>
+                            <td class="col-title">Understanding Care Robots for Young Children: Developmental and Rights-Based Design and Application</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T2-3</td>
+                            <td class="col-time">13:30~13:45</td>
+                            <td class="col-session">Cognitive Care & AI</td>
+                            <td class="col-authors"><span class="presenter">Dong Hwa Kim</span>, Seoung Won Jeon</td>
+                            <td class="col-affil">Researcher, JNT Co., Ltd.</td>
+                            <td class="col-title">A Bed-Style Physical AI Care Robots with User friendly Operation Using LLM-Based Voice Communication and Increased Safety by Causal Inference (Focusing on AI Application of Care Physical Robot)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T2-4</td>
+                            <td class="col-time">13:45~14:00</td>
+                            <td class="col-session">Cognitive Care & AI</td>
+                            <td class="col-authors"><span class="presenter">Sung-Min Park</span></td>
+                            <td class="col-affil">WHA-AI Co., Ltd.</td>
+                            <td class="col-title">A Study on Situation Prediction and Safe Task Execution of Care Robots Utilizing VLA and World Models</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T2-5</td>
+                            <td class="col-time">14:00~14:15</td>
+                            <td class="col-session">Cognitive Care & AI</td>
+                            <td class="col-authors"><span class="presenter">Sang-Hee Jung</span>, Yong Soon Shin</td>
+                            <td class="col-affil">Hanyang University</td>
+                            <td class="col-title">Factors Related to Separation Reactions in Older Adults After Using Communication Care Robots</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T2-6</td>
+                            <td class="col-time">14:15~14:30</td>
+                            <td class="col-session">Cognitive Care & AI</td>
+                            <td class="col-authors">You-Me Han, Jong-Hoon Kim, Mi-Kyung Cho, <span class="presenter">Hee-Soo Lim</span></td>
+                            <td class="col-affil">Hoseo University</td>
+                            <td class="col-title">A Meta-Analysis on the Educational Effects of Robot Utilization for Young Children</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T2-7</td>
+                            <td class="col-time">14:30~14:45</td>
+                            <td class="col-session">Cognitive Care & AI</td>
+                            <td class="col-authors"><span class="presenter">Ji-Yoo Park</span>, Sung-Joon Park</td>
+                            <td class="col-affil">Sungkyul University</td>
+                            <td class="col-title">Development and Evaluation of a Care Support Application Based on Facial Expression Recognition for Korean Older Adults</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T2-8</td>
+                            <td class="col-time">14:45~15:00</td>
+                            <td class="col-session">Cognitive Care & AI</td>
+                            <td class="col-authors"><span class="presenter">So-Seul Park</span>, Yong Soon Shin</td>
+                            <td class="col-affil">Hanyang University</td>
+                            <td class="col-title">Comparison of Organizational Changes and Care Staff Experiences One Year After Introducing High-Performance Transfer Assistive Devices in Long-Term Care Facilities</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="session-block">
+                <div class="session-header">15:00~16:00 Invited Talks Session (V2 Session) | Chair: Prof. Jeong-Whan Lee (Konkuk University Glocal Campus)</div>
+                <div class="table-responsive">
+                    <table class="detail-table">
+                        <thead>
+                            <tr>
+                                <th class="col-no">No.</th>
+                                <th class="col-time">Time</th>
+                                <th class="col-session">Session</th>
+                                <th class="col-authors">Speakers <span class="legend-blue">(Presenter in Blue)</span></th>
+                                <th class="col-affil">Affiliation</th>
+                                <th class="col-title">Presentation Title</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="col-no">V2-1</td>
+                            <td class="col-time">15:00~15:30</td>
+                            <td class="col-session">Special Lecture</td>
+                            <td class="col-authors"><span class="presenter">Prof. Jongbae Kim</span></td>
+                            <td class="col-affil">Yonsei University</td>
+                            <td class="col-title">Transforming the Power Wheelchair into a Robot</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">V2-2</td>
+                            <td class="col-time">15:30~16:00</td>
+                            <td class="col-session">Industry Talk</td>
+                            <td class="col-authors"><span class="presenter">Mr. Bob Chiang</span></td>
+                            <td class="col-affil">FREE Bionics</td>
+                            <td class="col-title">Rewiring the Walk: AI-Powered Exoskeletons in Modern Rehab</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="milestone-bar">
+                <span>16:00~16:30 Poster Session (P1 Session – See List Below)</span>
+            </div>
+            <div class="session-block">
+                <div class="session-header">16:30~17:45 Care Robots and Ethics Session (T3 Session) | Chair: Prof. Jeong-Whan Lee (Konkuk University Glocal Campus)</div>
+                <div class="table-responsive">
+                    <table class="detail-table">
+                        <thead>
+                            <tr>
+                                <th class="col-no">No.</th>
+                                <th class="col-time">Time</th>
+                                <th class="col-session">Session</th>
+                                <th class="col-authors">Authors <span class="legend-blue">(Presenter in Blue)</span></th>
+                                <th class="col-affil">Affiliation</th>
+                                <th class="col-title">Paper / Presentation Title</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="col-no">T3-1</td>
+                            <td class="col-time">16:30~16:45</td>
+                            <td class="col-session">Care Tech & Ethics</td>
+                            <td class="col-authors"><span class="presenter">Jeung-Im Kim</span></td>
+                            <td class="col-affil">Soonchunhyang University</td>
+                            <td class="col-title">Development of a Literature-Based Physical AI Nursing Protocol for Clinical Decision Support in Preterm Birth Risk</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T3-2</td>
+                            <td class="col-time">16:45~17:00</td>
+                            <td class="col-session">Care Tech & Ethics</td>
+                            <td class="col-authors"><span class="presenter">Lijun Yang</span>, Yong Soon Shin, Mi Young Kim</td>
+                            <td class="col-affil">Hanyang University</td>
+                            <td class="col-title">Priority and Sensitivity Analysis of Ethical Indicators for Care Robots</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T3-3</td>
+                            <td class="col-time">17:00~17:15</td>
+                            <td class="col-session">Care Tech & Ethics</td>
+                            <td class="col-authors"><span class="presenter">Hye-Young Jang</span>, Yong Soon Shin, Mi Young Kim, So-Seul Park, Lijun Yang, Sang-Hee Jung, Gwan-Soon Seo</td>
+                            <td class="col-affil">Hanyang University</td>
+                            <td class="col-title">Predictors of Caregivers' Ethical Perceptions Toward Care Robots</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T3-4</td>
+                            <td class="col-time">17:15~17:30</td>
+                            <td class="col-session">Care Tech & Ethics</td>
+                            <td class="col-authors">Yong Soon Shin, <span class="presenter">Mi Young Kim</span></td>
+                            <td class="col-affil">Hanyang University</td>
+                            <td class="col-title">Enhancing Caregivers’ Competence and Acceptance of Care Robots Through Theory- and Experience-Based Education: A Randomized Controlled Trial</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">T3-5</td>
+                            <td class="col-time">17:30~17:45</td>
+                            <td class="col-session">Care Tech & Ethics</td>
+                            <td class="col-authors"><span class="presenter">Ji-Hyun Nam</span></td>
+                            <td class="col-affil">Gyeonggi Research Institute (GRI)</td>
+                            <td class="col-title">Core Enabling Technologies and Architectural Integration of Care Robots Reflecting Spatial Characteristics of Long-Term Care Facilities: Focusing on Cases of Construction Companies and Operators in Japan, the U.S., and Europe</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="milestone-bar">
+                <span>17:45~17:55 Awards Ceremony (Best Paper Awards, Idea Contest)</span>
+            </div>
+            <div class="milestone-bar">
+                <span>17:55~18:00 Closing Remarks</span>
+            </div>
+        </div>
+
+        <div class="card" id="poster-session">
+            <h2>Poster Session (P1 Session)</h2>
+            <div class="section-note">
+                💡 <strong>Poster Presentation Guide:</strong> Attendees may attach question/comment notes for authors at the bottom of posters during lunch (12:00~13:00). Direct Q&A with authors based on the posted notes will take place during <strong>16:00 ~ 16:30 (P1 Session)</strong>. (<span class="presenter">Blue</span>: Presenting Author)
+            </div>
+            <div class="table-responsive">
+                <table class="detail-table">
+                    <thead>
+                        <tr>
+                            <th class="col-no">No.</th>
+                            <th class="col-session">Session</th>
+                            <th class="col-authors">Authors <span class="legend-blue">(Presenter in Blue)</span></th>
+                            <th class="col-affil">Affiliation</th>
+                            <th class="col-title">Paper Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-no">P1</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors">Hyunki In, <span class="presenter">Junho Choi</span></td>
+                            <td class="col-affil">KIST</td>
+                            <td class="col-title">Smart strap for a lower-limb exoskeleton COWALK-S</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P2</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Suyeong Park</span>, Hyewon Park, Kangwoo Lee, Van Thanh, Jehyeon Park, Hesam Haddad, Mahta Akhyani, Kyunghwan Kim, Pilwon Hur</td>
+                            <td class="col-affil">GIST, NT Robot Co., Ltd.</td>
+                            <td class="col-title">Development of a Modular Upper-Limb Rehabilitation Robot with Gamified Training for Personalized Care</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P3</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Yongseung Yang</span>, Hangyeol Lee, Kwonseung Cho, Kyunghwan Kim, Pilwon Hur</td>
+                            <td class="col-affil">GIST, NT Robot, Co.</td>
+                            <td class="col-title">Task-Feasible Region Analysis and Trajectory Optimization for Robot-Assisted Feeding</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P4</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Jong-Min Kim</span></td>
+                            <td class="col-affil">R-Vision Co., Ltd.</td>
+                            <td class="col-title">Dedicated Wireless Remote Controller for the Mobile Robot MobED — From Manual Control to Autonomous Driving and Auto-Charging</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P5</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Jeong-Hwa Lee</span></td>
+                            <td class="col-affil">Hangeul Dance Research Institute</td>
+                            <td class="col-title">An Embodied Hangeul Learning Care Robot for Older Adults: Hangeul Dance-Based Letter Discovery and Movement Interaction Model</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P6</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Seung-Woo Nam</span>, Wookyong Kwon, Yun-Su Chung, Song Li</td>
+                            <td class="col-affil">ETRI</td>
+                            <td class="col-title">Rotation-Aware Continuous-Time Conflict-Based Search for Multi-Care Robot Path Planning</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P7</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Yeong-hun Kwon</span>, Jongbae Kim</td>
+                            <td class="col-affil">Yonsei University</td>
+                            <td class="col-title">Development of a Powered Wheelchair for Transfer Assistance</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P8</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Seung-Hoon Shin</span>, Woo-Jung Shim</td>
+                            <td class="col-affil">Chongshin University</td>
+                            <td class="col-title">Development of Posture-Transition Utterance Sentences for Mobility Robots Assisting Older Adults and Persons with Disabilities — For Voice Interaction</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P9</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Seung-Eop Lim</span></td>
+                            <td class="col-affil">CURACO Inc.</td>
+                            <td class="col-title">Clinical Field Application Results and Overseas Expansion of Curaco Carebidet (Excretion Care Robot)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P10</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Naon Jo</span>, Kyunghwan Kim</td>
+                            <td class="col-affil">NT Robot, Co.</td>
+                            <td class="col-title">Development of a modular meal-assistance care robot whose modules can be assembled according to disability type and usage environment</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P11</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Seok-Hee Lee</span>, Hye-Ryeong Kang, Eun-Soo Jung, Kay (Kyunghwan) Kim, Jeong-Whan Lee</td>
+                            <td class="col-affil">Konkuk University Glocal Campus, NT Robot Co., Ltd.</td>
+                            <td class="col-title">Machine Learning-Based Forearm Motion Recognition Using Multi-Pressure Sensor Signals from a Meal-Assistance Robot Armrest</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P12</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Seon-Ja Jang</span>, Woo-Jung Shim</td>
+                            <td class="col-affil">Chongshin University</td>
+                            <td class="col-title">Development of a Voice Interaction Model for Autonomous Mobility Robots: Building a Context-Aware and Hazard-Response Voice-Controlled Dialogue Model Reflecting Real Utterances and Driving Environments of Older Adults and Persons with Disabilities</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P13</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">Kwang Gi Kim</span></td>
+                            <td class="col-affil">Gachon University</td>
+                            <td class="col-title">Kinematic Analysis of a Shoulder Rehabilitation Robot</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P14</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors">Seung-Ho Kim, <span class="presenter">Seung-Won Jeon</span></td>
+                            <td class="col-affil">JNT Co., Ltd., Daedeok Nuclear Forum</td>
+                            <td class="col-title">Gait Rehabilitation Trainer Robot for Persons with Walking Disabilities</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P15</td>
+                            <td class="col-session">Poster (Physical)</td>
+                            <td class="col-authors"><span class="presenter">I. O. Lee</span></td>
+                            <td class="col-affil">Ninety System Co</td>
+                            <td class="col-title">Spatially Aware Operation Solution for Multiple Care Robots Using Location Information</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P16</td>
+                            <td class="col-session">Poster (Cognitive)</td>
+                            <td class="col-authors">Brendon T. Murphy, <span class="presenter">Keonyoung Koh</span>, Woobean Seo, Hoseong Kwak, Chunghun Ha, Duhyun Ro</td>
+                            <td class="col-affil">CONNECTEVE Co, MIT, Seoul National University</td>
+                            <td class="col-title">Remembering What You Don’t Know: Planning with Persistent Identity Beliefs under Perceptual Aliasing</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P17</td>
+                            <td class="col-session">Poster (Cognitive)</td>
+                            <td class="col-authors"><span class="presenter">Wookho Son</span></td>
+                            <td class="col-affil">ETRI</td>
+                            <td class="col-title">A Standard Framework for Performance Analysis of the Elderly and Physically-Impaired (EDI) using Assistive Devices in Activities of Daily Living (ADL)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P18</td>
+                            <td class="col-session">Poster (Cognitive)</td>
+                            <td class="col-authors"><span class="presenter">Jihye Park</span></td>
+                            <td class="col-affil">Hoseo University</td>
+                            <td class="col-title">Children as Caregivers of Social Robots: A Teacher-Mediated Care-Loop Framework</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P19</td>
+                            <td class="col-session">Poster (Cognitive)</td>
+                            <td class="col-authors"><span class="presenter">Song Geun-Ho</span>, Son Jun-Soo, Bae Yeong-Geol</td>
+                            <td class="col-affil">Able AI</td>
+                            <td class="col-title">Multi-Modal Social AI: Edge-Centric, Privacy-Preserving Proactive Greeting and Conversation for Care Robots</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P20</td>
+                            <td class="col-session">Poster (Care Tech)</td>
+                            <td class="col-authors"><span class="presenter">Hyun-Joo Park</span></td>
+                            <td class="col-affil">Chungnam National University</td>
+                            <td class="col-title">How Social Care Robots Become Embedded in Society</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P21</td>
+                            <td class="col-session">Poster (Care Robot)</td>
+                            <td class="col-authors"><span class="presenter">Jin-Seok Woo</span></td>
+                            <td class="col-affil">NOVITEC Co., Ltd.</td>
+                            <td class="col-title">The Eyes of Care Robots, Together with the Present and Future: Care Robot Vision Perfected by High-Performance Cameras, On-Device Image Processing, and A-PHY Long-Distance Video Transmission</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P22</td>
+                            <td class="col-session">Poster (Care Robot)</td>
+                            <td class="col-authors"><span class="presenter">Choon-Hee Choi</span></td>
+                            <td class="col-affil">Independent Researcher</td>
+                            <td class="col-title">What to Ask in the Planning, Design, and Demonstration of Care Robots: Focusing on the CAT Model</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P23</td>
+                            <td class="col-session">Poster (Care Robot)</td>
+                            <td class="col-authors"><span class="presenter">Young-Soo Shin</span></td>
+                            <td class="col-affil">Hoseo University</td>
+                            <td class="col-title">Exploring a Developmental Appropriateness Evaluation Framework for Physical Robots in Early Childhood Care Settings</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P24</td>
+                            <td class="col-session">Poster (Care Robot)</td>
+                            <td class="col-authors"><span class="presenter">Jeung-Im Kim</span></td>
+                            <td class="col-affil">Soonchunhyang University</td>
+                            <td class="col-title">Development of a Literature-Based Physical AI Nursing Protocol for Clinical Decision Support in Preterm Birth Risk</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P25</td>
+                            <td class="col-session">Poster (Care Robot)</td>
+                            <td class="col-authors"><span class="presenter">Se-In Park</span>, Eun-Kyu Oh, Seung-Oh Han</td>
+                            <td class="col-affil">Hoseo University</td>
+                            <td class="col-title">Deep Learning-Based Vibration Signal Analysis for Early Detection of Abnormal Motion in Care Robots</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P26</td>
+                            <td class="col-session">Poster (Care Robot)</td>
+                            <td class="col-authors"><span class="presenter">Jong-Hwan Lee</span></td>
+                            <td class="col-affil">SWISSAMIET Co., Ltd.</td>
+                            <td class="col-title">The Optimal Choice for Robotics Applications</td>
+                        </tr>
+                        <tr>
+                            <td class="col-no">P27</td>
+                            <td class="col-session">Poster (Care Robot)</td>
+                            <td class="col-authors"><span class="presenter">Miho Okada</span></td>
+                            <td class="col-affil">Wacoh Tech</td>
+                            <td class="col-title">Robots That ‘Sense’ Force Are Transforming Elderly Care: Applications of Force Sensing Pioneered by DynPick</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
-    <footer><p>&copy; 2026 Korea Cooperative of Care Robots (KCCR). All rights reserved.</p></footer>
+    <footer><p>© 2026 Korea Cooperative of Care Robots (KCCR). All rights reserved.</p></footer>
 </div>
 <script src="menu.js"></script>
 </body>

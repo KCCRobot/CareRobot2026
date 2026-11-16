@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submission Guidelines - Care Robot 2026</title>
+    <title>Presentation Guidelines - Care Robot 2026</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.6; display: flex; min-height: 100vh; }
-        
         .sidebar { width: 260px; background-color: #1a1a1a; color: #ffffff; position: fixed; top: 0; left: 0; bottom: 0; padding: 35px 22px; overflow-y: auto; z-index: 100; }
         .sidebar-brand { font-size: 1.45rem; font-weight: 700; color: #ffffff; text-decoration: none; display: block; margin-bottom: 28px; letter-spacing: -0.01em; }
         .sidebar-menu { list-style: none; }
@@ -23,7 +22,6 @@
         .submenu li { margin-bottom: 8px; }
         .submenu a { font-size: 0.92rem; color: #9ca3af; }
         .submenu a:hover, .submenu a.active { color: #ffffff; }
-
         .main-wrapper { margin-left: 260px; flex: 1; display: flex; flex-direction: column; min-width: 0; }
         .top-lang-bar { display: flex; justify-content: flex-end; align-items: center; padding: 12px 30px; background-color: #0f172a; border-bottom: 1px solid #1e293b; }
         .lang-switch { display: inline-flex; align-items: center; gap: 12px; font-size: 1.05rem; font-weight: 700; }
@@ -32,149 +30,170 @@
         .lang-switch a:hover { color: #ffffff; background: rgba(255, 255, 255, 0.08); }
         .lang-switch a.active { color: #0d9488; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
         .lang-switch .divider { color: #475569; font-weight: 300; }
-        
         header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: white; padding: 50px 25px 40px; text-align: center; border-bottom: 4px solid #0d9488; }
         .header-container { max-width: 900px; margin: 0 auto; }
         .badge { display: inline-block; background-color: rgba(13, 148, 136, 0.3); border: 1px solid #0d9488; color: #5eead4; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; }
         h1.conf-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; color: #ffffff; }
         .conf-subtitle { font-size: 1.2rem; color: #93c5fd; margin-bottom: 18px; }
         .conf-meta { display: inline-flex; gap: 20px; flex-wrap: wrap; font-size: 1.02rem; color: #e2e8f0; background: rgba(255, 255, 255, 0.08); padding: 10px 22px; border-radius: 8px; }
-        
         main { max-width: 960px; margin: 35px auto; padding: 0 25px; width: 100%; }
         .card { background: white; border-radius: 10px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
         .card h2 { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 15px; border-left: 4px solid #0d9488; padding-left: 10px; }
         .card p { font-size: 1.02rem; line-height: 1.75; margin-bottom: 14px; }
-        .dates-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-        .dates-table th, .dates-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; }
-        .dates-table th { background-color: #f1f5f9; font-weight: 600; color: #0f172a; }
-        .dates-table td:last-child { font-weight: 600; color: #1e3a8a; }
-        
+        .section-badge { display: inline-block; background-color: #0d9488; color: #ffffff; font-size: 0.82rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; margin-bottom: 10px; }
+        .section-badge.navy { background-color: #1e3a8a; }
+
+        /* Summary Grid */
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin: 20px 0 10px; }
+        .summary-item { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px; }
+        .summary-item .label { font-size: 0.85rem; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+        .summary-item .value { font-size: 1.05rem; font-weight: 700; color: #0f172a; }
+        .summary-item .desc { font-size: 0.88rem; color: #64748b; margin-top: 4px; }
+
+        /* Numbered List Styles */
+        .guideline-list { list-style: none; padding-left: 0; margin-top: 15px; }
+        .guideline-list li { display: flex; align-items: flex-start; gap: 14px; padding: 14px 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; font-size: 1.01rem; line-height: 1.65; color: #334155; }
+        .guideline-list li:last-child { margin-bottom: 0; }
+        .step-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background-color: #1e3a8a; color: #ffffff; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px; }
+        .step-num.teal { background-color: #0d9488; }
+        .guideline-content strong { color: #0f172a; }
+        .highlight-note { background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-left: 4px solid #d97706; padding: 14px 18px; border-radius: 6px; margin-top: 16px; font-size: 0.96rem; color: #78350f; }
+
         footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94a3b8; font-size: 0.88rem; margin-top: auto; }
-        @media (max-width: 768px) { .sidebar { position: relative; width: 100%; height: auto; } .main-wrapper { margin-left: 0; } body { flex-direction: column; } }
+        @media (max-width: 768px) {
+            .sidebar { position: relative; width: 100%; height: auto; }
+            .main-wrapper { margin-left: 0; }
+            body { flex-direction: column; }
+            .guideline-list li { padding: 12px; gap: 10px; }
+        }
     </style>
 </head>
 <body>
-
-<!-- Left Navigation Sidebar -->
-<nav class="sidebar">
-    <a href="index.html" class="sidebar-brand">Care Robot 2026</a>
-    <ul class="sidebar-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="announcements.html" class="bold-item">Announcements</a></li>
-        <li class="menu-dropdown">
-            <div class="menu-dropdown-title"><span class="arrow">∨</span> Program</div>
-            <ul class="submenu">
-                <li><a href="schedule.html">Schedule at a Glance</a></li>
-                <li><a href="presentations.html">Presentations</a></li>
-                <li><a href="keynotes.html">Keynote Speakers</a></li>
-                <li><a href="exhibition.html">Exhibition</a></li>
-                <li><a href="tours.html">Industrial Tours & B2B</a></li>
-            </ul>
-        </li>
-        <li class="menu-dropdown open">
-            <div class="menu-dropdown-title"><span class="arrow">∧</span> Call for Contributions</div>
-            <ul class="submenu" style="display: block;">
-                <li><a href="call-for-papers.html">Call for Papers</a></li>
-                <li><a href="submission-guidelines.html" class="active">Submission Guidelines</a></li>
-            </ul>
-        </li>
-        <li><a href="registration.html">Registration</a></li>
-        <li><a href="organizing-committee.html">Organizing Committee</a></li>
-        <li><a href="sponsorship.html">Sponsorship & Exhibition</a></li>
-        <li><a href="about.html">About KCCR</a></li>
-        <li><a href="care-robot-2025.html">Care Robot 2025 Archive</a></li>
-    </ul>
-</nav>
-
+<div id="sidebar-container"></div>
 <div class="main-wrapper">
-    <div class="top-lang-bar">
-        <div class="lang-switch">
-            <span class="globe-icon">🌐</span>
-            <a href="submission-guidelines_kr.html"><span style="font-size:1.15rem;">🇰🇷</span> KOR</a>
-            <span class="divider">|</span>
-            <a href="submission-guidelines.html" class="active"><span style="font-size:1.15rem;">🇺🇸</span> ENG</a>
-        </div>
-    </div>
-
+    <div class="top-lang-bar"><div class="lang-switch"><span class="globe-icon">🌐</span><a href="submission-guidelines_kr.html"><span style="font-size:1.15rem;">🇰🇷</span> KOR</a><span class="divider">|</span><a href="submission-guidelines.html" class="active"><span style="font-size:1.15rem;">🇺🇸</span> ENG</a></div></div>
     <header>
         <div class="header-container">
-            <div class="badge">Contributions</div>
+            <div class="badge">PRESENTATION GUIDELINES</div>
             <h1 class="conf-title">Care Robot 2026</h1>
-            <div class="conf-subtitle">Author Submission Guidelines</div>
-            <div class="conf-meta">
-                <span>📅 November 25–27, 2026</span>
-                <span>📍 Yonsei Severance Building, Seoul, Korea</span>
-            </div>
+            <div class="conf-subtitle">Oral & Poster Presentation Guidelines</div>
+            <div class="conf-meta"><span>📅 Thursday, November 26, 2026</span><span>📍 Yonsei Severance Building (Opposite Seoul Station)</span></div>
         </div>
     </header>
-
     <main>
+        <!-- Presenter Overview -->
         <div class="card">
-            <h2>Submission Guidelines & Instructions</h2>
-            <p>Please review the instructions below before submitting your manuscript or poster abstract to Care Robot 2026.</p>
-
-            <!-- Template Download Box with QR Code -->
-            <div style="background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border: 1.5px solid #0d9488; border-radius: 12px; padding: 25px; margin: 25px 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
-                <div style="flex: 1; min-width: 280px;">
-                    <div style="display: inline-block; background-color: #0d9488; color: #ffffff; font-size: 0.82rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; margin-bottom: 8px;">Template Download</div>
-                    <h3 style="color: #0f172a; font-size: 1.3rem; margin-bottom: 8px;">Manuscript & Poster Templates</h3>
-                    <p style="color: #475569; font-size: 0.95rem; margin-bottom: 15px; line-height: 1.6;">
-                        Please prepare your submission using the official Care Robot 2026 templates.<br>
-                        Scan the <strong>QR Code with your smartphone camera</strong> or click the button below to download the templates.
-                    </p>
-                    <a href="https://drive.google.com/file/d/1L_C5yyubGr8p1g56eZdwdgEneRFfX0sN/view?usp=drive_link" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background-color: #1e3a8a; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        📥 Download Templates (Google Drive)
-                    </a>
-                    <div style="font-size: 0.8rem; color: #64748b; margin-top: 8px; word-break: break-all;">
-                        Direct URL: <a href="https://drive.google.com/file/d/1L_C5yyubGr8p1g56eZdwdgEneRFfX0sN/view?usp=drive_link" target="_blank" style="color: #0d9488;">https://drive.google.com/file/d/1L_C5yyubGr8p1g56eZdwdgEneRFfX0sN/view?usp=drive_link</a>
-                    </div>
+            <h2>Presenter Information Overview</h2>
+            <p>
+                Paper and poster submissions for <strong>Care Robot 2026</strong> have officially closed. To ensure a smooth conference program, all oral and poster presenters are kindly requested to review the on-site presentation guidelines and schedule below in advance. <strong>(All times indicated on this page are in Korea Standard Time, KST / UTC+9.)</strong>
+            </p>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="label">Presentation Slides (PPT)</div>
+                    <div class="value">By Morning of Nov 24 (Tue), KST</div>
+                    <div class="desc">kccrobot@gmail.com (PPT format)</div>
                 </div>
-
-                <!-- QR Code -->
-                <div style="text-align: center; background: #ffffff; padding: 15px 20px; border-radius: 10px; border: 1px solid #cbd5e1; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1L_C5yyubGr8p1g56eZdwdgEneRFfX0sN%2Fview%3Fusp%3Ddrive_link" alt="Template QR Code" style="width: 140px; height: 140px; display: block; margin: 0 auto 8px;">
-                    <span style="font-size: 0.82rem; font-weight: 700; color: #1e3a8a;">📱 Scan with Camera</span>
+                <div class="summary-item">
+                    <div class="label">Oral Presentation Time</div>
+                    <div class="value">15 Mins Total (12m Talk + 3m Q&A)</div>
+                    <div class="desc">Chime bell rings at 10-minute mark</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Poster Display & Session</div>
+                    <div class="value">Posted by 10:50 / Session 16:00–16:30 (KST)</div>
+                    <div class="desc">Printed & mounted by Secretariat</div>
                 </div>
             </div>
+        </div>
 
-            <h3 style="color: #1e3a8a; margin: 25px 0 10px;">1. Manuscript Format</h3>
-            <ul style="margin-left: 20px; margin-bottom: 15px; color: #475569;">
-                <li><strong>Full / Short Paper:</strong> Up to 4 pages (PDF) including all figures, tables, and references.</li>
-                <li><strong>Poster Abstract:</strong> 1-page summary abstract (PDF).</li>
-                <li><strong>Submission:</strong> Email your PDF to <a href="mailto:kccrobot@gmail.com" style="color: #1e3a8a; font-weight: bold;">kccrobot@gmail.com</a></li>
+        <!-- 1. Oral Presentation Guidelines -->
+        <div class="card">
+            <div class="section-badge navy">ORAL PRESENTATION</div>
+            <h2>1. Paper (Oral) Presentation Guidelines</h2>
+            <ul class="guideline-list">
+                <li>
+                    <span class="step-num">1</span>
+                    <div class="guideline-content">
+                        <strong>Presentation Language:</strong> Presenters may deliver their presentation in either <strong>English or Korean</strong>.
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">2</span>
+                    <div class="guideline-content">
+                        <strong>Time Allocation:</strong> Each paper is allotted <strong>12 minutes for presentation and 3 minutes for Q&amp;A</strong> (15 minutes total). For smooth time management, <strong>a chime bell will sound 10 minutes</strong> after the presentation begins.
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">3</span>
+                    <div class="guideline-content">
+                        <strong>Advance Submission of Presentation Slides (PPT):</strong> Please submit your presentation file to the Secretariat via email (<a href="mailto:kccrobot@gmail.com" style="color: #1e3a8a; font-weight: 700;">kccrobot@gmail.com</a>) by the <strong>morning of Tuesday, November 24 (KST)</strong> so it can be pre-loaded onto the session laptop. <span style="color: #b91c1c; font-weight: 700;">Please submit the file strictly in PPT (.ppt / .pptx) format, not PDF.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">4</span>
+                    <div class="guideline-content">
+                        <strong>Presentation Equipment Policy:</strong> Due to the tight session schedule, <strong>personal laptops are not permitted</strong> in order to prevent display connection errors or delays. All presenters must use the <strong>official presentation laptop prepared by the Secretariat</strong>.
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 2. Poster Presentation Guidelines -->
+        <div class="card">
+            <div class="section-badge">POSTER PRESENTATION</div>
+            <h2>2. Poster Presentation Guidelines</h2>
+            <ul class="guideline-list">
+                <li>
+                    <span class="step-num teal">1</span>
+                    <div class="guideline-content">
+                        <strong>Printing &amp; Mounting Support:</strong> All posters will be <strong>printed and mounted by the Secretariat</strong>, so poster presenters do not need to print or bring their own physical copies.
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num teal">2</span>
+                    <div class="guideline-content">
+                        <strong>Display Completion Time:</strong> Poster mounting will be completed no later than <strong>10:50 AM (KST)</strong> on the day of the conference.
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num teal">3</span>
+                    <div class="guideline-content">
+                        <strong>Post-it Questions &amp; Comments:</strong> Conference attendees may write questions or comments on the <strong>Post-it notes</strong> provided by the Secretariat and attach them to the bottom section of each poster.
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num teal">4</span>
+                    <div class="guideline-content">
+                        <strong>Preparing Q&amp;A Responses:</strong> Poster presenters are encouraged to check the Post-it notes (questions and comments) attached to their poster and prepare their responses ahead of the poster session.
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num teal">5</span>
+                    <div class="guideline-content">
+                        <strong>Mandatory Attendance at Poster Session (P1 Session):</strong> During the <strong>Poster Session (P1 Session) from 16:00 to 16:30 (KST)</strong>, presenters must stand by their posters to engage in Q&amp;A with attendees. <strong>Please strictly observe the session schedule and ensure you are present.</strong>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num teal">6</span>
+                    <div class="guideline-content">
+                        <strong>Poster Removal Time:</strong> The Secretariat will begin taking down the posters starting at <strong>17:00 (KST)</strong>.
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num teal">7</span>
+                    <div class="guideline-content">
+                        <strong>Collecting Removed Posters:</strong> Presenters who wish to keep their printed poster may <strong>pick it up on-site immediately after the Closing Ceremony</strong>.
+                    </div>
+                </li>
             </ul>
 
-            <h3 style="color: #1e3a8a; margin: 25px 0 10px;">2. Important Dates</h3>
-            <table class="dates-table">
-                <thead><tr><th>Milestone</th><th>Date</th></tr></thead>
-                <tbody>
-                    <tr><td><strong>Registration Period</strong></td><td><strong>September 1 – September 30, 2026</strong></td></tr>
-                    <tr><td>Paper / Poster Submission Deadline</td><td>October 12, 2026</td></tr>
-                    <tr><td>Notification of Acceptance</td><td>October 26, 2026</td></tr>
-                    <tr><td>Early-bird Registration Deadline</td><td>October 31, 2026</td></tr>
-                </tbody>
-            </table>
+            <div class="highlight-note">
+                <strong>📌 Contact:</strong> For inquiries regarding slide submission or on-site presentation arrangements, please contact the Korea Co-op of Care Robots (KCCR) Secretariat at <a href="mailto:kccrobot@gmail.com" style="color: #92400e; font-weight: 700;">kccrobot@gmail.com</a>.
+            </div>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Korea Cooperative of Care Robots (KCCR). All rights reserved.</p>
-    </footer>
+    <footer><p>&copy; 2026 Korea Co-op of Care Robots (KCCR). All rights reserved.</p></footer>
 </div>
-
-<script>
-    document.querySelectorAll('.menu-dropdown').forEach(item => {
-        const title = item.querySelector('.menu-dropdown-title');
-        if (title) {
-            title.addEventListener('click', () => {
-                item.classList.toggle('open');
-                const arrow = item.querySelector('.arrow');
-                if (arrow) {
-                    arrow.textContent = item.classList.contains('open') ? '∧' : '∨';
-                }
-            });
-        }
-    });
-</script>
+<script src="menu.js"></script>
 </body>
 </html>

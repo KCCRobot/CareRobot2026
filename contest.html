@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 Contests - Care Robot 2026</title>
+    <title>2026 Contest Results - Care Robot 2026</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.6; display: flex; min-height: 100vh; }
@@ -35,40 +35,133 @@
         .badge { display: inline-block; background-color: rgba(13, 148, 136, 0.3); border: 1px solid #0d9488; color: #5eead4; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; }
         h1.conf-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; color: #ffffff; }
         .conf-subtitle { font-size: 1.2rem; color: #93c5fd; margin-bottom: 18px; }
-        .conf-meta { display: inline-flex; gap: 20px; flex-wrap: wrap; font-size: 1.02rem; color: #e2e8f0; background: rgba(255, 255, 255, 0.08); padding: 10px 22px; border-radius: 8px; }
+        .conf-meta { display: inline-flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 6px; font-size: 1.02rem; color: #e2e8f0; background: rgba(255, 255, 255, 0.08); padding: 14px 26px; border-radius: 8px; }
         main { max-width: 960px; margin: 35px auto; padding: 0 25px; width: 100%; }
         .card { background: white; border-radius: 10px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
         .card h2 { font-size: 1.5rem; color: #1e3a8a; margin-bottom: 15px; border-left: 4px solid #0d9488; padding-left: 10px; }
         .card p { font-size: 1.02rem; line-height: 1.75; margin-bottom: 14px; }
-        .contest-card { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 24px; margin-top: 20px; }
         .contest-badge { display: inline-block; background-color: #0d9488; color: #ffffff; font-size: 0.82rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; margin-bottom: 10px; }
-        .info-list { list-style: none; padding-left: 0; margin-top: 10px; }
-        .info-list li { margin-bottom: 10px; font-size: 1rem; line-height: 1.6; }
-        .info-list strong { color: #0f172a; min-width: 140px; display: inline-block; }
-        .nested-list { margin-top: 6px; padding-left: 20px; list-style: disc; }
-        .nested-list li { margin-bottom: 6px; font-size: 0.95rem; }
-        .warning-notice { background-color: #fff1f2; border-left: 4px solid #f43f5e; padding: 10px 14px; margin: 6px 0; border-radius: 0 6px 6px 0; color: #9f1239; font-size: 0.93rem; font-weight: 500; }
-        .important-notice { background-color: #fefce8; border-left: 4px solid #eab308; padding: 10px 14px; margin: 6px 0; border-radius: 0 6px 6px 0; color: #854d0e; font-size: 0.93rem; font-weight: 600; }
-        .qr-submit-box {
-            background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+        .contest-badge.navy { background-color: #1e3a8a; }
+
+        /* Result Summary Banner */
+        .result-summary-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
             border: 1.5px solid #0d9488;
             border-radius: 10px;
-            padding: 18px 20px;
-            margin: 12px 0 16px;
+            padding: 18px 22px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 16px;
             flex-wrap: wrap;
+            gap: 12px;
         }
-        .submit-btn-link { display: inline-flex; align-items: center; gap: 6px; background: #0d9488; color: white !important; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.92rem; margin-top: 6px; }
-        .submit-btn-link:hover { background: #0f766e; }
-        .qr-card { text-align: center; background: #ffffff; padding: 10px 14px; border-radius: 8px; border: 1px solid #cbd5e1; box-shadow: 0 2px 4px rgba(0,0,0,0.05); flex-shrink: 0; }
-        .qr-card img { width: 115px; height: 115px; display: block; margin: 0 auto 5px; }
-        .qr-card span { font-size: 0.78rem; font-weight: 700; color: #1e3a8a; }
-        .contact-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px 18px; margin-top: 15px; font-size: 0.96rem; color: #1e40af; }
+        .result-summary-box .stat-pill {
+            background: #1e3a8a;
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        /* Winners Table */
+        .winners-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.96rem; }
+        .winners-table th { background-color: #f1f5f9; color: #0f172a; font-weight: 700; text-align: left; padding: 12px 14px; border-top: 2px solid #1e3a8a; border-bottom: 1px solid #cbd5e1; }
+        .winners-table td { padding: 13px 14px; border-bottom: 1px solid #e2e8f0; vertical-align: middle; }
+        .winners-table tr:hover { background-color: #f8fafc; }
+        .winners-table tr.top-prize { background-color: #fefce8; }
+        .winners-table tr.top-prize:hover { background-color: #fef9c3; }
+
+        .rank-badge { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; text-align: center; min-width: 112px; }
+        .rank-grand { background-color: #d97706; color: #ffffff; }
+        .rank-2nd { background-color: #0d9488; color: #ffffff; }
+        .rank-3rd { background-color: #2563eb; color: #ffffff; }
+        .rank-honorable { background-color: #e2e8f0; color: #334155; }
+
+        .work-title { font-weight: 700; color: #0f172a; }
+
+        /* Judges' Review Box */
+        .review-box {
+            margin-top: 28px;
+            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #cbd5e1;
+            border-left: 5px solid #1e3a8a;
+            border-radius: 10px;
+            padding: 26px 28px;
+        }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-bottom: 14px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #cbd5e1;
+        }
+        .review-title {
+            font-size: 1.18rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .review-author {
+            font-size: 0.94rem;
+            font-weight: 700;
+            color: #0f172a;
+            background: #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 6px;
+        }
+        .review-content p {
+            font-size: 0.98rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 14px;
+        }
+        .review-content p:last-child {
+            margin-bottom: 0;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        /* Judges Section */
+        .judges-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 16px; }
+        .judge-card { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 24px; display: flex; gap: 24px; align-items: flex-start; }
+        .judge-card.chair { background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%); border: 1.5px solid #93c5fd; }
+        .judge-photo-box { width: 140px; height: 175px; border-radius: 8px; overflow: hidden; border: 1px solid #cbd5e1; background-color: #e2e8f0; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #64748b; font-size: 0.82rem; }
+        .judge-photo-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .judge-info { flex: 1; }
+        .judge-role { display: inline-block; background: #1e3a8a; color: #ffffff; font-size: 0.82rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-bottom: 8px; }
+        .judge-role.prelim { background: #0d9488; }
+        .judge-name { font-size: 1.3rem; font-weight: 800; color: #0f172a; margin-bottom: 10px; }
+        .judge-bio { list-style: none; padding-left: 0; }
+        .judge-bio li { position: relative; padding-left: 14px; margin-bottom: 6px; font-size: 0.96rem; color: #334155; }
+        .judge-bio li::before { content: "·"; position: absolute; left: 0; font-weight: 900; color: #0d9488; }
+
+        /* Notice Box Styles */
+        .contest-card { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 24px; margin-top: 16px; }
+        .info-list { list-style: none; padding-left: 0; margin-top: 4px; }
+        .info-list li { margin-bottom: 12px; font-size: 1rem; line-height: 1.6; display: flex; align-items: flex-start; }
+        .info-list li:last-child { margin-bottom: 0; }
+        .info-list strong { color: #0f172a; min-width: 175px; display: inline-block; flex-shrink: 0; }
+        .desk-notice { color: #0f766e; font-weight: 600; }
         footer { text-align: center; padding: 25px 20px; background: #0f172a; color: #94a3b8; font-size: 0.88rem; margin-top: auto; }
-        @media (max-width: 768px) { .sidebar { position: relative; width: 100%; height: auto; } .main-wrapper { margin-left: 0; } body { flex-direction: column; } .qr-submit-box { flex-direction: column; text-align: center; } }
+
+        @media (max-width: 768px) {
+            .sidebar { position: relative; width: 100%; height: auto; }
+            .main-wrapper { margin-left: 0; }
+            body { flex-direction: column; }
+            .judge-card { flex-direction: column; align-items: center; text-align: center; }
+            .judge-bio li { text-align: left; }
+            .winners-table th, .winners-table td { padding: 10px 8px; font-size: 0.88rem; }
+            .rank-badge { min-width: 90px; font-size: 0.78rem; }
+            .review-box { padding: 20px 18px; }
+            .info-list li { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
@@ -84,126 +177,309 @@
     </div>
     <header>
         <div class="header-container">
-            <div class="badge">2026 CONTEST</div>
-            <h1 class="conf-title">Care Robot 2026 Contests</h1>
-            <div class="conf-subtitle">2026 Public Contests for a Compassionate Future with Care Robots</div>
+            <div class="badge">CONTEST 2026 RESULTS</div>
+            <h1 class="conf-title">Care Robot 2026 Contest Results</h1>
+            <div class="conf-subtitle">Announcement of Winners for the 2026 Contest for a Future Where Care and Robots Come Together</div>
             <div class="conf-meta">
-                <span>📅 Submission Deadline: Oct 31, 2026, 18:00 KST</span>
-                <span>🏆 Exhibition & Awards: Nov 26, 2026</span>
+                <span>🏆 <strong>Exhibition & Award Ceremony</strong></span>
+                <span>⏰ <strong>Time:</strong> Thursday, November 26, 2026, 17:45 – 18:00</span>
+                <span>📍 <strong>Venue:</strong> Care Robot 2026 Conference (Grand Conference Room, B1, Yonsei Severance Building)</span>
             </div>
         </div>
     </header>
     <main>
+        <!-- Contest Results Overview -->
         <div class="card">
-            <h2>2026 Contest Overview</h2>
+            <h2>2026 Contest Results Announcement</h2>
             <p>
-                At <strong>Care Robot 2026</strong>, we are hosting the <strong>2026 Drawing Contest</strong> and <strong>2026 Essay Contest</strong> 
-                to picture the future where humans and robots coexist and to share touching caregiving experiences.
+                We extend our deepest gratitude to everyone who participated in the <strong>Care Robot 2026</strong> “My Care Story” Essay Contest and “The Robot I Dream Of” Drawing Contest.
             </p>
             <p>
-                Selected works will be <strong>exhibited and awarded during the main conference on Thursday, November 26, 2026</strong>. 
-                We look forward to your active participation.
+                Following a rigorous evaluation process, we are pleased to announce the winners in each category below. The award ceremony for the winning entries will take place <strong>during the Care Robot 2026 Conference on Thursday, November 26, 2026</strong>.
             </p>
         </div>
 
+        <!-- 1. "My Care Story" Essay Contest Winners & Review -->
         <div class="card">
-            <div class="contest-badge">2026 Drawing Category</div>
-            <h2>2026 "The Robot of My Dreams" Drawing Contest</h2>
-            <p>Express the warm robot of the future living together and assisting humans through the eyes of children.</p>
-            
-            <div class="contest-card">
-                <ul class="info-list">
-                    <li><strong>Eligibility</strong> Preschoolers and elementary students</li>
-                    <li><strong>Requirements</strong> Must include <strong>at least one human and one robot</strong></li>
-                    <li><strong>Media</strong> No limitations (crayons, watercolors, colored pencils, digital art, etc.)</li>
-                    <li><strong>Deadline</strong> <strong>Saturday, October 31, 2026, 18:00 KST</strong></li>
-                    <li><strong>How to Submit</strong>
-                        <ul class="nested-list">
-                            <li><strong>On-site:</strong> Draw and submit directly at the <a href="https://www.slw.kr/kor/main.do" target="_blank" style="color: #0d9488; font-weight: 600; text-decoration: underline;">Smart Life Week</a> venue (Oct 6–8, COEX, Seoul) (<strong>※ Online web registration below is mandatory after submission</strong>)</li>
-                            <li><strong>Online:</strong> Scan the QR code below or submit via the online form (Online web registration is required even if sent to <code>kccrobot@gmail.com</code>)</li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="contest-badge">2026 Essay Category Results</div>
+            <h2>2026 “My Care Story” Essay Contest Winners</h2>
+            <p>We proudly announce the 8 winners who shared heartfelt experiences and touching stories from the field of caregiving.</p>
 
-                <div class="qr-submit-box">
-                    <div style="flex: 1; min-width: 250px;">
-                        <h4 style="color: #0f172a; margin-bottom: 5px; font-size: 1.05rem;">📱 2026 Online Web Registration Form</h4>
-                        <p style="color: #475569; font-size: 0.92rem; margin-bottom: 8px;">Scan the QR code with your smartphone camera or click the button below to complete web registration.</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1z3O0UZT4WyAlBxPIls_jH18JHVcrdESGM6ickjHusotVlg/viewform?usp=dialog" target="_blank" class="submit-btn-link">📝 Go to Online Web Registration</a>
-                    </div>
-                    <div class="qr-card">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSf1z3O0UZT4WyAlBxPIls_jH18JHVcrdESGM6ickjHusotVlg%2Fviewform%3Fusp%3Ddialog" alt="Online Submission QR Code">
-                        <span>Scan with Camera</span>
-                    </div>
+            <table class="winners-table">
+                <thead>
+                    <tr>
+                        <th style="width: 145px;">Award</th>
+                        <th style="width: 140px;">Name</th>
+                        <th style="width: 260px;">Affiliation & Position</th>
+                        <th>Title of Work</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="top-prize">
+                        <td><span class="rank-badge rank-grand">1st Prize</span></td>
+                        <td><strong>Soseul Park</strong></td>
+                        <td>Ph.D. Candidate / Researcher, College of Nursing, Hanyang University</td>
+                        <td><span class="work-title">‘A Person Who Connects the Warmth of Care’</span></td>
+                    </tr>
+                    <tr class="top-prize">
+                        <td><span class="rank-badge rank-2nd">2nd Prize</span></td>
+                        <td><strong>Bokyung Park</strong></td>
+                        <td>Social Worker, Hyoja’s House</td>
+                        <td><span class="work-title">‘Breaking Down Generational Walls Through Robots’</span></td>
+                    </tr>
+                    <tr class="top-prize">
+                        <td><span class="rank-badge rank-3rd">3rd Prize</span></td>
+                        <td><strong>Sangmi Kim</strong></td>
+                        <td>Ph.D. Student, Department of Social Welfare, Hoseo University</td>
+                        <td><span class="work-title">‘MADE IN Care: A Small Smile Entering Through the Gap’</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td><strong>Yoonji Cho</strong></td>
+                        <td>Poet</td>
+                        <td><span class="work-title">‘Mom Was a Flower to Me’</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td><strong>Eunkyung Koo</strong></td>
+                        <td>Vice Director, Samsung Traum Daycare Center</td>
+                        <td><span class="work-title">‘Until Crying Became a Greeting’</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td><strong>Moonsun Hong</strong></td>
+                        <td>Director, Sarang Nursing Home</td>
+                        <td><span class="work-title">‘A Wordless Greeting, an Unwavering Heart’</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td><strong>Areum Jung</strong></td>
+                        <td>Director, Edison Daycare Center</td>
+                        <td><span class="work-title">‘My Care Story’</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td><strong>Doyoung Lee</strong></td>
+                        <td>Care Worker, Hyoja’s House</td>
+                        <td><span class="work-title">‘Flower Care Blooming in an Island Home’</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Judges' Review for Care Essay -->
+            <div class="review-box">
+                <div class="review-header">
+                    <div class="review-title">✍️ Judges’ Review: Care Essay Winning Entries</div>
+                    <div class="review-author">Myungshik Cho, Ph.D. in Philosophy</div>
                 </div>
-
-                <ul class="info-list">
-                    <li><strong>Notice</strong>
-                        <div class="important-notice">
-                            📢 <strong>[Important Notice]</strong> Even if you submit your drawing in person at the Smart Life Week booth or send it via email, <strong>you must complete the online web registration form</strong>. <u>Submissions without online web registration may be excluded from the evaluation.</u>
-                        </div>
-                        <div class="warning-notice">
-                            ⚠️ Artworks generated or assisted by AI (Artificial Intelligence) may be disqualified from evaluation. Please submit original creative works only.
-                        </div>
-                    </li>
-                    <li><strong>Awards</strong> On-site exhibition and award ceremony on November 26, 2026</li>
-                </ul>
-
-                <div class="contact-box">
-                    📞 <strong>Contact Person:</strong> Jihye Park (+82-10-4753-6580)
+                <div class="review-content">
+                    <p>
+                        Reading these care essays led me to reflect earnestly once again on life in old age.<br>
+                        The rising proportion of the aging population presents a shared challenge of caregiving for all of us.<br>
+                        We have now entered an era in which care must go beyond the boundaries of families, caregivers, facilities, and robots, responding collaboratively as an organic community. The Chinese character for “person” (人) depicts two strokes leaning on one another to stand. Especially in later life, we must bring together all of our collective strengths to become a pillar of support for one another.
+                    </p>
+                    <p>
+                        Based on vivid, firsthand experiences of care and nursing, the winning entries realistically depicted both the fulfillment and areas for improvement, making them deeply relatable. In particular, I was profoundly moved by how the authors endured countless difficulties in care settings with a strong sense of mission and actively proposed diverse alternatives to make better care possible.
+                    </p>
+                    <p>
+                        In particular, the top-prize winning piece, “A Person Who Connects the Warmth of Care” by Soseul Park, stood out for its focus on researching care robots and applying them in the field—not merely to meet patients’ immediate needs, but out of a heartfelt desire to offer them a “better future.” We could clearly see the dedication and passion to propose programs and designs optimized for care environments and patient needs, continuously striving for improvement. It reminds us that for patients in various circumstances, we must move forward together as an organic cooperative community encompassing the touch of family, professional medical services, caregiver support, and the necessary robots and equipment.
+                    </p>
+                    <p>
+                        Through your practice of care, your devoted efforts, and your proactive research aimed at improving the future, I believe that both patients and our own later years will become even more peaceful and joyful.
+                    </p>
+                    <p>
+                        Thank you for sharing your sincere stories, and heartfelt congratulations to all the winners.<br>
+                        Thank you all for your wonderful work.
+                    </p>
                 </div>
             </div>
         </div>
 
+        <!-- 2. "The Robot I Dream Of" Drawing Contest Winners & Review -->
         <div class="card">
-            <div class="contest-badge">2026 Essay Category</div>
-            <h2>2026 "My Caregiving Story" Essay Contest</h2>
-            <p>Share your candid personal experiences and heartfelt moments of giving or receiving care in an essay.</p>
+            <div class="contest-badge">2026 Drawing Category Results</div>
+            <h2>2026 “The Robot I Dream Of” Drawing Contest Winners</h2>
             
-            <div class="contest-card">
-                <ul class="info-list">
-                    <li><strong>Theme</strong> True experiences from the perspective of a care provider or recipient</li>
-                    <li><strong>Word Count</strong> <strong>3,000 to 10,000 characters</strong> (including spaces)</li>
-                    <li><strong>Deadline</strong> <strong>Saturday, October 31, 2026, 18:00 KST</strong></li>
-                    <li><strong>How to Submit</strong> 
-                        <ul class="nested-list">
-                            <li>Scan the QR code below or submit via the online form</li>
-                            <li>Even if you submit via email (<code>kccrobot@gmail.com</code>), please be sure to complete the online web registration form below.</li>
+            <div class="result-summary-box">
+                <div>
+                    <strong style="color:#0f172a; font-size:1.03rem;">🌍 10 Young Artists Awarded Worldwide</strong>
+                    <p style="margin: 2px 0 0; font-size: 0.93rem; color: #475569;">A total of 105 children from 5 countries participated, sharing their warm imaginations.</p>
+                </div>
+                <span class="stat-pill">Participants: 105 Children from 5 Countries</span>
+            </div>
+
+            <table class="winners-table">
+                <thead>
+                    <tr>
+                        <th style="width: 145px;">Award</th>
+                        <th>Affiliation / Country</th>
+                        <th style="width: 150px;">Name</th>
+                        <th style="width: 100px;">Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="top-prize">
+                        <td><span class="rank-badge rank-grand">Grand Prize</span></td>
+                        <td>Asan National/Public I-U-Shell The First Daycare Center</td>
+                        <td><strong>Seojun Yang</strong></td>
+                        <td>Age 7</td>
+                    </tr>
+                    <tr class="top-prize">
+                        <td><span class="rank-badge rank-2nd">2nd Prize</span></td>
+                        <td>Seoul Yeomdong Elementary School</td>
+                        <td><strong>Geonryul Kim</strong></td>
+                        <td>Age 10</td>
+                    </tr>
+                    <tr class="top-prize">
+                        <td><span class="rank-badge rank-3rd">3rd Prize</span></td>
+                        <td>Australia</td>
+                        <td><strong>Naya</strong></td>
+                        <td>Age 10</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td>Asan National/Public I-U-Shell The First Daycare Center</td>
+                        <td><strong>Mingyu Kyung</strong></td>
+                        <td>Age 7</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td>Saengmyeongsup Daycare Center</td>
+                        <td><strong>Haeun Min</strong></td>
+                        <td>Age 7</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td>Asan National/Public I-U-Shell The First Daycare Center</td>
+                        <td><strong>Junseo Yang</strong></td>
+                        <td>Age 7</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td>Hangaram Daycare Center</td>
+                        <td><strong>Ian Cho</strong></td>
+                        <td>Age 7</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td>USA</td>
+                        <td><strong>Rose</strong></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td>Jayeonai Daycare Center</td>
+                        <td><strong>Daeun Choi</strong></td>
+                        <td>Age 5</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-honorable">Honorable Mention</span></td>
+                        <td>Berahills Daycare Center</td>
+                        <td><strong>Chaeeun Yoo</strong></td>
+                        <td>Age 5</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Judges' Review for Robot Drawing -->
+            <div class="review-box">
+                <div class="review-header">
+                    <div class="review-title">✍️ Judges’ Review: Robot Drawing Winning Entries</div>
+                    <div class="review-author">Myungshik Cho, Ph.D. in Philosophy</div>
+                </div>
+                <div class="review-content">
+                    <p>To children, robots seem to be warm and friendly companions, much like close friends.</p>
+                    <p>
+                        The winning entries offer a glimpse into the thoughts and hearts of children as they relate to robots.<br>
+                        Across almost all submissions, one can feel how engagingly and enthusiastically the children view robots.
+                    </p>
+                    <p>
+                        In particular, the Grand Prize winning work by Seojun Yang (age 5) delightfully portrays the joy of living in an environment alongside robots. First, the spatial composition is bold, and the relationship between the people and the robot is actively depicted. Even the facial expressions of both the robot and the people are drawn brightly, conveying the happiness of spending time together with a robot. Drawn with earnest effort through concrete observation and imagination, it has become a truly vibrant piece.
+                    </p>
+                    <p>
+                        In the other winning artworks as well, each child depicted the robot they envisioned with warmth and affection, showing that children endow robots with personality and soul.<br>
+                        This fills us with anticipation for the rich experiences children and robots will build together as they commune in future educational settings.
+                    </p>
+                    <p>
+                        Thank you for submitting such wonderful robot drawings, and sincere congratulations to all the winners.<br>
+                        Well done, everyone.<br>
+                        Thank you.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Judges Introduction -->
+        <div class="card">
+            <div class="contest-badge navy">JUDGES</div>
+            <h2>Judging Panel</h2>
+            <p>Distinguished experts in art, education, and counseling participated to ensure a fair and thorough evaluation.</p>
+
+            <div class="judges-grid">
+                <!-- Final Round Judge (Chair of the Judging Committee) -->
+                <div class="judge-card chair">
+                    <div class="judge-photo-box">
+                        <img src="photos/myungshik cho.jpg" alt="Photo of Judging Chair Myungshik Cho">
+                    </div>
+                    <div class="judge-info">
+                        <span class="judge-role">Chair of Judges · Final Round Judge</span>
+                        <div class="judge-name">Myungshik Cho <span style="font-size: 0.95rem; font-weight: 500; color: #475569;">Ph.D. in Philosophy</span></div>
+                        <ul class="judge-bio">
+                            <li>B.F.A. in Painting and M.F.A. in Western Painting, College of Fine Arts, Seoul National University; Ph.D. in Philosophy, Kangwon National University</li>
+                            <li>Former Associate Professor of Painting, Kookmin University; Former Assistant Professor of Fine Arts, Incheon National University</li>
+                            <li>Director, The Forest Art Factory Sculpture Research Institute</li>
                         </ul>
-                    </li>
-                </ul>
-
-                <div class="qr-submit-box">
-                    <div style="flex: 1; min-width: 250px;">
-                        <h4 style="color: #0f172a; margin-bottom: 5px; font-size: 1.05rem;">📱 2026 Online Web Registration Form</h4>
-                        <p style="color: #475569; font-size: 0.92rem; margin-bottom: 8px;">Scan the QR code with your smartphone camera or click the button below to complete web registration.</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1z3O0UZT4WyAlBxPIls_jH18JHVcrdESGM6ickjHusotVlg/viewform?usp=dialog" target="_blank" class="submit-btn-link">📝 Go to Online Web Registration</a>
-                    </div>
-                    <div class="qr-card">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSf1z3O0UZT4WyAlBxPIls_jH18JHVcrdESGM6ickjHusotVlg%2Fviewform%3Fusp%3Ddialog" alt="Online Submission QR Code">
-                        <span>Scan with Camera</span>
                     </div>
                 </div>
 
+                <!-- Preliminary Round Judge -->
+                <div class="judge-card">
+                    <div class="judge-photo-box">
+                        <img src="photos/jihye park.jpg" alt="Photo of Preliminary Judge Jihye Park">
+                    </div>
+                    <div class="judge-info">
+                        <span class="judge-role prelim">Preliminary Round Judge</span>
+                        <div class="judge-name">Jihye Park</div>
+                        <ul class="judge-bio">
+                            <li>B.F.A. in Visual Design, Kyung Hee University; M.A. in Expressive Arts Psychotherapy, Myongji University; Ph.D. Student in AI Content Convergence, Hoseo University</li>
+                            <li>Secretary General, Institute for Digital Education Convergence, Hoseo University</li>
+                            <li>Deputy Director, Jaram Space (Child & Adolescent Counseling)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Award Ceremony & Inquiries -->
+        <div class="card">
+            <h2>Award Ceremony & Inquiries</h2>
+            <div class="contest-card" style="margin-top: 0;">
                 <ul class="info-list">
-                    <li><strong>Notice</strong>
-                        <div class="important-notice">
-                            📢 <strong>[Important Notice]</strong> Even if you deliver your essay directly or send it via email (<a href="mailto:kccrobot@gmail.com" style="color:#854d0e; text-decoration: underline;">kccrobot@gmail.com</a>), <strong>you must complete the online web registration form</strong>. <u>Submissions without online web registration may be excluded from the evaluation.</u>
-                        </div>
-                        <div class="warning-notice">
-                            ⚠️ Essays generated using generative AI (e.g., ChatGPT) may be disqualified from the screening process. Please submit authentic personal narratives.
-                        </div>
+                    <li>
+                        <strong>Exhibition & Awards</strong>
+                        <div>Exhibition & Award Ceremony</div>
                     </li>
-                    <li><strong>Awards</strong> Exhibition and award ceremony on November 26, 2026 <strong>&lt;웹 게시 또는 제본 (Web Publication or Booklet Binding)&gt;</strong></li>
+                    <li>
+                        <strong>Time</strong>
+                        <div>Thursday, November 26, 2026, 17:45 – 18:00</div>
+                    </li>
+                    <li>
+                        <strong>Venue</strong>
+                        <div>Care Robot 2026 Conference (Grand Conference Room, B1, Yonsei Severance Building)</div>
+                    </li>
+                    <li>
+                        <strong>Notice</strong>
+                        <div class="desk-notice">Please confirm your attendance via email (kccrobot@gmail.com) by Monday, November 23. On the day of the event (November 26), please arrive at the registration desk by 17:00.</div>
+                    </li>
+                    <li>
+                        <strong>Inquiries</strong>
+                        <div>Korea Cooperative of Care Robots (KCCR) Email: <a href="mailto:kccrobot@gmail.com" style="color:#1e40af; font-weight:600;">kccrobot@gmail.com</a></div>
+                    </li>
                 </ul>
-
-                <div class="contact-box">
-                    📞 <strong>Contact Person:</strong> Heeok Yang (+82-10-8650-6994)
-                </div>
             </div>
         </div>
     </main>
-    <footer><p>&copy; 2026 Korea Cooperative of Care Robots (KCCR). All rights reserved.</p></footer>
+    <footer><p>© 2026 Korea Cooperative of Care Robots (KCCR). All rights reserved.</p></footer>
 </div>
 <script src="menu.js"></script>
 </body>
